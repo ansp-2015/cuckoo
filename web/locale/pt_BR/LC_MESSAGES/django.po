@@ -1,0 +1,440 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-19 13:04-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: analysis/views.py:395
+msgid ""
+"ElasticSearch is not enabled and therefore it is not possible to do a global "
+"search."
+msgstr ""
+
+#: analysis/views.py:450
+msgid ""
+"Multiple tasks with this ID deleted, thanks for all the fish (the specified "
+"analysis was present multiple times in mongo)."
+msgstr ""
+
+#: analysis/views.py:454
+msgid "Task deleted, thanks for all the fish."
+msgstr ""
+
+#: analysis/views.py:458
+msgid "The specified analysis does not exist"
+msgstr "A análise especificada não existe"
+
+#: analysis/views.py:540
+msgid "Could not find the requested stream"
+msgstr ""
+
+#: compare/views.py:24 compare/views.py:60
+msgid "No analysis found with specified ID"
+msgstr "Nenhuma análise encontrada com o ID informado"
+
+#: templates/analysis/export.html:53
+msgid "Select which files you want to include in the export"
+msgstr "Selecione quais arquivos você quer incluir no arquivo a ser exportado"
+
+#: templates/analysis/export.html:72
+msgid "Export"
+msgstr "Exportar"
+
+#: templates/analysis/index.html:5
+msgid "Files"
+msgstr "Arquivos"
+
+#: templates/analysis/index.html:6
+msgid "URLs"
+msgstr ""
+
+#: templates/analysis/index.html:13
+#, fuzzy
+#| msgid "Recent"
+msgid "Recent Files"
+msgstr "Arquivos recentes"
+
+#: templates/analysis/index.html:47 templates/analysis/index.html.py:106
+#: templates/analysis/pending.html:32
+msgid "pending"
+msgstr "pendente"
+
+#: templates/analysis/index.html:49 templates/analysis/index.html.py:108
+#: templates/analysis/pending.html:34
+msgid "running"
+msgstr "executando"
+
+#: templates/analysis/index.html:51 templates/analysis/index.html.py:110
+#: templates/analysis/pending.html:36
+msgid "completed"
+msgstr "completo"
+
+#: templates/analysis/index.html:59 templates/analysis/index.html.py:112
+#: templates/analysis/pending.html:38
+msgid "reported"
+msgstr ""
+
+#: templates/analysis/index.html:69
+msgid "No files analyzed yet"
+msgstr "Nenhum arquivo ainda analisado"
+
+#: templates/analysis/index.html:77
+msgid "Recent URLs"
+msgstr "URLs recentes"
+
+#: templates/analysis/index.html:83
+msgid "Timestamp"
+msgstr ""
+
+#: templates/analysis/index.html:84 templates/submission/index.html:60
+#: templates/submission/index.html.py:92
+msgid "URL"
+msgstr ""
+
+#: templates/analysis/index.html:85
+msgid "Status"
+msgstr "Estado"
+
+#: templates/analysis/index.html:122
+msgid "No URLs analyzed yet"
+msgstr "Nehuma URL ainda analisada"
+
+#: templates/analysis/overview/_file.html:3 templates/submission/index.html:59
+#, fuzzy
+#| msgid "Files"
+msgid "File"
+msgstr "Arquivos"
+
+#: templates/analysis/overview/_file.html:8
+msgid "Size"
+msgstr "Tamanho"
+
+#: templates/analysis/overview/_file.html:13
+msgid "Download"
+msgstr ""
+
+#: templates/analysis/overview/_file.html:16
+msgid "Resubmit sample"
+msgstr ""
+
+#: templates/analysis/overview/_file.html:23
+msgid "Type"
+msgstr "Tipo"
+
+#: templates/analysis/overview/_info.html:9
+#, fuzzy
+#| msgid "Analysis Package"
+msgid "Analysis"
+msgstr "Pacote de análises"
+
+#: templates/analysis/overview/_info.html:12
+msgid "Compare analysis to ..."
+msgstr ""
+
+#: templates/analysis/overview/_info.html:15
+msgid "Export analysis"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:23
+msgid "Category"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:24
+msgid "Started"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:25
+#, fuzzy
+#| msgid "completed"
+msgid "Completed"
+msgstr "completo"
+
+#: templates/analysis/overview/_info.html:26
+msgid "Duration"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:27
+#, fuzzy
+#| msgid "Low"
+msgid "Log"
+msgstr "Baixa"
+
+#: templates/analysis/overview/_info.html:35
+msgid "seconds"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:36
+msgid "Show Log"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:45
+msgid "Error"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:57
+#: templates/submission/index.html:149
+msgid "Machine"
+msgstr "Máquina"
+
+#: templates/analysis/overview/_info.html:62
+msgid "Name"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:63
+msgid "Label"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:64
+msgid "Started On"
+msgstr ""
+
+#: templates/analysis/overview/_info.html:65
+msgid "Shutdown On"
+msgstr ""
+
+#: templates/analysis/overview/_signatures.html:20
+msgid "Signatures"
+msgstr ""
+
+#: templates/analysis/overview/index.html:14
+#, python-format
+msgid ""
+"This %(category)s appears fairly benign with a score of <strong>%(score)s "
+"out of 10.</strong>"
+msgstr ""
+"Esta %(category)s parece ser begnigna com uma contagem de <strong>%(score)s "
+"de 10.</strong>"
+
+#: templates/analysis/overview/index.html:20
+#, fuzzy, python-format
+#| msgid ""
+#| "This %(category)s appears fairly benign with a score of <strong>%(score)s "
+#| "out of 10.</strong>"
+msgid ""
+"<p>This %(category)s shows some signs of potential malicious behavior.</p> "
+"<p>The score of this %(category)s is <strong>%(score)s out of 10.</strong></"
+"p>"
+msgstr ""
+"Esta %(category)s parece ser begnigna com uma contagem de <strong>%(score)s "
+"de 10.</strong>"
+
+#: templates/analysis/overview/index.html:27
+#, python-format
+msgid ""
+"This %(analysis.info.category)s shows numerous signs of malicious behavior. "
+"<br/><br/> The score of this %(analysis.info.category)s is <strong>"
+"%(analysis.info.score)s out of 10.</strong>"
+msgstr ""
+
+#: templates/analysis/overview/index.html:35
+#, fuzzy, python-format
+#| msgid ""
+#| "This %(category)s appears fairly benign with a score of <strong>%(score)s "
+#| "out of 10.</strong>"
+msgid ""
+"<p>This %(analysis.info.category)s is <b>very suspicious</b>, with a score "
+"of <strong>%(analysis.info.score)s out of 10!</strong></p>"
+msgstr ""
+"Esta %(category)s parece ser begnigna com uma contagem de <strong>%(score)s "
+"de 10.</strong>"
+
+#: templates/analysis/overview/index.html:42
+msgid ""
+"<b>Please notice</b>: The scoring system is currently still in development "
+"and should be considered an <b><i>alpha</i></b> feature."
+msgstr ""
+
+#: templates/analysis/overview/index.html:60
+msgid "Network"
+msgstr ""
+
+#: templates/analysis/pending.html:6
+msgid "Pending Tasks"
+msgstr "Tarefas pendentes"
+
+#: templates/analysis/pending.html:48
+msgid "No pending tasks."
+msgstr "Nenhum tarefa pendente"
+
+#: templates/dashboard/index.html:5
+#, python-format
+msgid ""
+"Estimating ~<b>%(estimate_hour)s</b> analysis per hour, <b>%(estimate_day)s</"
+"b> per day."
+msgstr ""
+"Aproximadamente <b>%(estimate_hour)s</b> análises por hora, <b>"
+"%(estimate_day)s</b> por dia."
+
+#: templates/dashboard/index.html:14
+msgid "Total tasks"
+msgstr "Número de tarefas"
+
+#: templates/dashboard/index.html:20
+msgid "Total samples"
+msgstr "Número de amostras"
+
+#: templates/dashboard/index.html:27
+#, fuzzy
+#| msgid "Status"
+msgid "States"
+msgstr "Estados"
+
+#: templates/dashboard/index.html:32
+#, fuzzy
+#| msgid "Status"
+msgid "State"
+msgstr "Estado"
+
+#: templates/dashboard/index.html:33
+msgid "Count"
+msgstr ""
+
+#: templates/error.html:4
+msgid "ERROR"
+msgstr "ERRO"
+
+#: templates/footer.html:6
+msgid "Back to the top"
+msgstr "Voltar para o topo"
+
+#: templates/header.html:31
+msgid "Dashboard"
+msgstr "Console"
+
+#: templates/header.html:32
+msgid "Recent"
+msgstr "Recentes"
+
+#: templates/header.html:33
+msgid "Pending"
+msgstr "Pendente"
+
+#: templates/header.html:34
+msgid "Search"
+msgstr "Busca"
+
+#: templates/header.html:35
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/header.html:36
+msgid "Import"
+msgstr "Importar"
+
+#: templates/submission/index.html:66
+msgid "Chosen file to resubmit"
+msgstr ""
+
+#: templates/submission/index.html:80
+msgid "Select"
+msgstr "Selecione"
+
+#: templates/submission/index.html:88
+msgid "Chosen URL to resubmit"
+msgstr ""
+
+#: templates/submission/index.html:101
+msgid "Network routing through <i>dirty line</i> or VPN"
+msgstr ""
+
+#: templates/submission/index.html:105
+msgid "None (no internet access)"
+msgstr "Nenhum (sem acesso à internet)"
+
+#: templates/submission/index.html:119
+msgid "Advanced Options"
+msgstr "Opções avançadas"
+
+#: templates/submission/index.html:124
+msgid "Analysis Package"
+msgstr "Pacote de análises"
+
+#: templates/submission/index.html:126
+msgid "Detect Automatically"
+msgstr "Detectar automaticamente"
+
+#: templates/submission/index.html:133
+msgid "Timeout"
+msgstr ""
+
+#: templates/submission/index.html:137
+msgid "Options"
+msgstr "Opções"
+
+#: templates/submission/index.html:141
+msgid "Priority"
+msgstr "Prioridade"
+
+#: templates/submission/index.html:143
+msgid "Low"
+msgstr "Baixa"
+
+#: templates/submission/index.html:144
+msgid "Medium"
+msgstr "Média"
+
+#: templates/submission/index.html:145
+msgid "High"
+msgstr "Alta"
+
+#: templates/submission/index.html:157
+msgid "Custom"
+msgstr ""
+
+#: templates/submission/index.html:162
+msgid "No Injection"
+msgstr ""
+
+#: templates/submission/index.html:162
+msgid "disable behavioral analysis"
+msgstr "desabilita análise comportamental"
+
+#: templates/submission/index.html:167
+msgid "Process Memory Dump"
+msgstr "Processar \"dump\" de memória"
+
+#: templates/submission/index.html:172
+msgid "Full Memory Dump"
+msgstr ""
+
+#: templates/submission/index.html:172
+msgid ""
+"if the \"memory\" processing module is enabled, will launch a Volatility "
+"analysis"
+msgstr ""
+"se o módulo de processamento de \"memória\" estiver habilitado, executará "
+"uma análise pelo Volatility"
+
+#: templates/submission/index.html:177
+msgid "Enforce Timeout"
+msgstr ""
+
+#: templates/submission/index.html:182
+msgid "Enable Simulated Human Interaction"
+msgstr ""
+
+#: templates/submission/index.html:187
+msgid "Enable Services"
+msgstr ""
+
+#: templates/submission/index.html:187
+msgid "enable simulated environment specified in the auxiliary configuration"
+msgstr ""
+
+#: templates/submission/index.html:198
+msgid "Analyze"
+msgstr ""

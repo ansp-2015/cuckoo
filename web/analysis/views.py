@@ -22,6 +22,7 @@ import pymongo
 from bson.objectid import ObjectId
 from django.core.exceptions import PermissionDenied, ObjectDoesNotExist
 from gridfs import GridFS
+from django.utils.translation import ugettext_lazy as _
 
 sys.path.append(settings.CUCKOO_PATH)
 
@@ -391,8 +392,8 @@ def search(request):
     """New Search API using ElasticSearch as backend."""
     if not settings.ELASTIC:
         return render(request, "error.html", {
-            "error": "ElasticSearch is not enabled and therefore it is "
-                     "not possible to do a global search.",
+            "error": _("ElasticSearch is not enabled and therefore it is "
+                       "not possible to do a global search."),
         })
 
     if request.method == "GET":
@@ -446,15 +447,15 @@ def remove(request, task_id):
     # was run manually.
     if analyses.count() > 1:
         message = (
-            "Multiple tasks with this ID deleted, thanks for all the fish "
-            "(the specified analysis was present multiple times in mongo)."
+            _("Multiple tasks with this ID deleted, thanks for all the fish "
+              "(the specified analysis was present multiple times in mongo).")
         )
     elif analyses.count() == 1:
-        message = "Task deleted, thanks for all the fish."
+        message = _("Task deleted, thanks for all the fish.")
 
     if not analyses.count():
         return render(request, "error.html", {
-            "error": "The specified analysis does not exist",
+            "error": _("The specified analysis does not exist"),
         })
 
     for analysis in analyses:
@@ -536,7 +537,7 @@ def pcapstream(request, task_id, conntuple):
         offset = stream["offset"]
     except:
         return render(request, "standalone_error.html", {
-            "error": "Could not find the requested stream",
+            "error": _("Could not find the requested stream"),
         })
 
     try:
