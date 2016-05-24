@@ -1,23 +1,28 @@
+{% load i18n %}
 <section id="summary">
-    <h4><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Summary</h4>
+    <h4><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {% trans "Summary" %}</h4>
     <div class="tabbable tabs">
         <ul class="nav nav-pills" style="margin-bottom: 0;">
-            <li class="active"><a href="#summary_files" data-toggle="tab">Files</a></li>
-            <li><a href="#summary_keys" data-toggle="tab">Registry</a></li>
-            <li><a href="#summary_mutexes" data-toggle="tab">Mutexes</a></li>
-            <li><a href="#summary_directories" data-toggle="tab">Directories</a></li>
-            <li><a href="#summary_processes" data-toggle="tab">Processes</a></li>
+            <li class="active"><a href="#summary_files" data-toggle="tab">{% trans "Files" %}</a></li>
+            <li><a href="#summary_keys" data-toggle="tab">{% trans "Registry" %}</a></li>
+            <li><a href="#summary_mutexes" data-toggle="tab">{% trans "Mutexes" %}</a></li>
+            <li><a href="#summary_directories" data-toggle="tab">{% trans "Directories" %}</a></li>
+            <li><a href="#summary_processes" data-toggle="tab">{% trans "Processes" %}</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade in active" id="summary_files">
                 {% for process in analysis.behavior.generic %}
                     {% if process.summary %}
                     <div class="panel panel-default">
-                        <div class="panel-heading"><h3 class="panel-title">Process {{process.process_name}} ({{process.pid}})</h3></div>
+                        <div class="panel-heading"><h3 class="panel-title">
+                            {% blocktrans with name=process.process_name pid=process.pid trimmed %}
+                            Process {{name}} ({{pid}})
+                            {% endblocktrans %}
+                        </h3></div>
                         <ul class="list-group">
                         {% if process.summary.file_opened %}
                             <li class="list-group-item">
-                                <p><b>Opened files</b></p>
+                                <p><b>{% trans "Opened files" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.file_opened %}
                                     <li>{{entry}}</li>
@@ -28,7 +33,7 @@
 
                         {% if process.summary.file_written %}
                             <li class="list-group-item">
-                                <p><b>Written files</b></p>
+                                <p><b>{% trans "Written files" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.file_written %}
                                     <li>{{entry}}</li>
@@ -39,7 +44,7 @@
 
                         {% if process.summary.file_read %}
                             <li class="list-group-item">
-                                <p><b>Files Read</b></p>
+                                <p><b>{% trans "Files Read" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.file_read %}
                                     <li>{{entry}}</li>
@@ -56,11 +61,15 @@
                 {% for process in analysis.behavior.generic %}
                     {% if process.summary %}
                     <div class="panel panel-default">
-                        <div class="panel-heading"><h3 class="panel-title">Process {{process.process_name}} ({{process.pid}})</h3></div>
+                        <div class="panel-heading"><h3 class="panel-title">
+                            {% blocktrans with name=process.process_name pid=process.pid trimmed %}
+                            Process {{name}} ({{pid}})
+                            {% endblocktrans %}
+                        </h3></div>
                         <ul class="list-group">
                         {% if process.summary.regkey_opened %}
                             <li class="list-group-item">
-                                <p><b>Registry keys opened</b></p>
+                                <p><b>{% trans "Registry keys opened" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.regkey_opened %}
                                     <li>{{entry}}</li>
@@ -71,7 +80,7 @@
 
                         {% if process.summary.regkey_written %}
                             <li class="list-group-item">
-                                <p><b>Registry keys written</b></p>
+                                <p><b>{% trans "Registry keys written" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.regkey_written %}
                                     <li>{{entry}}</li>
@@ -82,7 +91,7 @@
 
                         {% if process.summary.regkey_read %}
                             <li class="list-group-item">
-                                <p><b>Registry keys read</b></p>
+                                <p><b>{% trans "Registry keys read" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.regkey_read %}
                                     <li>{{entry}}</li>
@@ -99,11 +108,15 @@
                 {% for process in analysis.behavior.generic %}
                     {% if process.summary %}
                     <div class="panel panel-default">
-                        <div class="panel-heading"><h3 class="panel-title">Process {{process.process_name}} ({{process.pid}})</h3></div>
+                        <div class="panel-heading"><h3 class="panel-title">
+                            {% blocktrans with name=process.process_name pid=process.pid trimmed %}
+                            Process {{name}} ({{pid}})
+                            {% endblocktrans %}
+                        </h3></div>
                         <ul class="list-group">
                         {% if process.summary.mutex %}
                             <li class="list-group-item">
-                                <p><b>Mutexes accessed</b></p>
+                                <p><b>{% trans "Mutexes accessed" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.mutex %}
                                     <li>{{entry}}</li>
@@ -120,11 +133,15 @@
                 {% for process in analysis.behavior.generic %}
                     {% if process.summary %}
                     <div class="panel panel-default">
-                        <div class="panel-heading"><h3 class="panel-title">Process {{process.process_name}} ({{process.pid}})</h3></div>
+                        <div class="panel-heading"><h3 class="panel-title">
+                            {% blocktrans with name=process.process_name pid=process.pid trimmed %}
+                            Process {{name}} ({{pid}})
+                            {% endblocktrans %}
+                        </h3></div>
                         <ul class="list-group">
                         {% if process.summary.directory_created %}
                             <li class="list-group-item">
-                                <p><b>Directories created</b></p>
+                                <p><b>{% trans "Directories created" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.directory_created %}
                                     <li>{{entry}}</li>
@@ -135,7 +152,7 @@
 
                         {% if process.summary.directory_removed %}
                             <li class="list-group-item">
-                                <p><b>Directories removed</b></p>
+                                <p><b>{% trans "Directories removed" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.directory_removed %}
                                     <li>{{entry}}</li>
@@ -146,7 +163,7 @@
 
                         {% if process.summary.directory_enumerated %}
                             <li class="list-group-item">
-                                <p><b>Directories enumerated</b></p>
+                                <p><b>{% trans "Directories enumerated" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.directory_enumerated %}
                                     <li>{{entry}}</li>
@@ -163,11 +180,15 @@
                 {% for process in analysis.behavior.generic %}
                     {% if process.summary %}
                     <div class="panel panel-default">
-                        <div class="panel-heading"><h3 class="panel-title">Process {{process.process_name}} ({{process.pid}})</h3></div>
+                        <div class="panel-heading"><h3 class="panel-title">
+                            {% blocktrans with name=process.process_name pid=process.pid trimmed %}
+                            Process {{name}} ({{pid}})
+                            {% endblocktrans %}
+                        </h3></div>
                         <ul class="list-group">
                         {% if process.summary.command_line %}
                             <li class="list-group-item">
-                                <p><b>Processes created</b></p>
+                                <p><b>{% trans "Processes created" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.command_line %}
                                     <li>{{entry}}</li>
@@ -178,7 +199,7 @@
 
                         {% if process.summary.dll_loaded %}
                             <li class="list-group-item">
-                                <p><b>DLLs Loaded</b></p>
+                                <p><b>{% trans "DLLs Loaded" %}</b></p>
                                 <ul>
                                 {% for entry in process.summary.dll_loaded %}
                                     <li>{{entry}}</li>

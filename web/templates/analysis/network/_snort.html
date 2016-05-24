@@ -1,10 +1,11 @@
-<h4>Snort Alerts</h4>
+{% load i18n %}
+<h4>{% trans "Snort Alerts" %}</h4>
 {% if analysis.snort.alerts %}
     <table class="table table-striped table-bordered">
         <tr>
-            <th>Flow</th>
+            <th>{% trans "Flow" %}</th>
             <th>SID</th>
-            <th>Message</th>
+            <th>{% trans "Message" %}</th>
         </tr>
         {% for alert in analysis.snort.alerts %}
         <tr>
@@ -19,5 +20,5 @@
         {% endfor %}
     </table>
 {% else %}
-    <p>No Snort Alerts</p>
+    <p>{% trans "No Snort Alerts" %}</p>
 {% endif %}

@@ -1,4 +1,4 @@
-{% load analysis_tags %}
+{% load analysis_tags i18n %}
 
 <style type="text/css">
 .signature {
@@ -17,20 +17,20 @@
 }
 </style>
 <section id="signatures">
-    <h4><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Signatures</h4>
+    <h4><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> {% trans "Signatures" %}</h4>
     {% for signature in analysis.signatures %}
         <a style="text-decoration: none;" href="#signature_{{signature.name}}" data-toggle="collapse">
         <div class="alert {% if signature.severity <= 1 %}alert-info{% elif signature.severity == 2 %}alert-warning{% else %}alert-danger{% endif %} signature">
         {{signature.description}}
         {% if signature.marks %}
             {% if signature.marks|length == 1 %}
-            (1 event)
+            ({% trans "1 event" %})
             {% elif signature.markcount == signature.marks|length %}
-            ({{ signature.marks|length }} events)
+            ({% blocktrans with marks=signature.marks|lenght %}{{ marks }} events{% endblocktrans %})
             {% elif signature.markcount %}
-            ({{ signature.marks|length }} out of {{ signature.markcount }} events)
+            ({% blocktrans with marks=signature.marks|lenght mark=signature.markcount%}{{ marks }} out of {{ mark }} events{% endblocktrans %})
             {% else %}
-            ({{ signature.marks|length }} events)
+            ({% blocktrans with marks=signature.marks|lenght %}{{ marks }} events{% endblocktrans %})
             {% endif %}
         {% endif %}
         </div></a>
@@ -48,11 +48,11 @@
 
                         <thead>
                             <tr>
-                                <th width="15%">Time &amp; API</th>
-                                <th width="65%">Arguments</th>
-                                <th width="5%">Status</th>
-                                <th width="10%">Return</th>
-                                <th width="5%">Repeated</th>
+                                <th width="15%">{% trans "Time &amp; API" %}</th>
+                                <th width="65%">{% trans "Arguments" %}</th>
+                                <th width="5%">{% trans "Status" %}</th>
+                                <th width="10%">{% trans "Return" %}</th>
+                                <th width="5%">{% trans "Repeated" %}</th>
                             </tr>
                         </thead>
                     {% endif %}
@@ -82,6 +82,6 @@
         </div>
     {% endfor %}
     {% if not analysis.signatures %}
-        <p>No signatures</p>
+        <p>{% trans "No signatures" %}</p>
     {% endif %}
 </section>

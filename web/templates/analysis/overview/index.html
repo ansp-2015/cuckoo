@@ -1,3 +1,4 @@
+{% load i18n %}
 <div class="row">
     <div class="col-md-8">
         {% if analysis.info.category == "file" and analysis.target %}
@@ -10,27 +11,35 @@
         <h4><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Score</h4>
         {% if analysis.info.score < 1 %}
         <div class="alert alert-success">
-            This {{ analysis.info.category }} appears fairly benign with a score of <strong>{{ analysis.info.score }} out of 10.</strong>
+        {% blocktrans with category=analysis.info.category score=analysis.info.score trimmed %}
+            This {{ category }} appears fairly benign with a score of <strong>{{ score }} out of 10.</strong>
+        {% endblocktrans %}
         </div>
         {% elif analysis.info.score < 2 %}
         <div class="alert alert-info">
-            <p>This {{ analysis.info.category }} shows some signs of potential malicious behavior.</p>
-            <p>The score of this {{ analysis.info.category}} is <strong>{{ analysis.info.score }} out of 10.</strong></p>
+        {% blocktrans with category=analysis.info.category score=analysis.info.score trimmed %}
+            <p>This {{ category }} shows some signs of potential malicious behavior.</p>
+            <p>The score of this {{ category }} is <strong>{{ score }} out of 10.</strong></p>
+        {% endblocktrans %}
         </div>
         {% elif analysis.info.score < 5 %}
         <div class="alert alert-warning">
+        {% blocktrans with category=analysis.info.category score=analysis.info.score trimmed %}
             This {{ analysis.info.category }} shows numerous signs of malicious behavior.
             <br/><br/>
             The score of this {{ analysis.info.category}} is <strong>{{ analysis.info.score }} out of 10.</strong>
-        </div>
+         {% endblocktrans %}
+       </div>
         {% else %}
         <div class="alert alert-danger">
+        {% blocktrans with category=analysis.info.category score=analysis.info.score trimmed %}
             <p>This {{ analysis.info.category }} is <b>very suspicious</b>, with a score of <strong>{{ analysis.info.score }} out of 10!</strong></p>
+        {% endblocktrans %}
         </div>
         {% endif %}
 
         <p>
-            <b>Please notice</b>: The scoring system is currently still in development and should be considered an <b><i>alpha</i></b> feature.
+            {% trans "<b>Please notice</b>: The scoring system is currently still in development and should be considered an <b><i>alpha</i></b> feature." %}
         </p>
     </div>
 </div>
@@ -48,7 +57,7 @@
 
 <div style="margin-top: 30px;"></div>
 
-<h4><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Network</h4>
+<h4><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> {% trans "Network" %}</h4>
 <div class="row">
     <div class="col-xs-6">{% include "analysis/network/_dns.html" %}</div>
     <div class="col-xs-6">{% include "analysis/network/_hosts.html" %}</div>

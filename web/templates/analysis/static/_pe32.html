@@ -1,28 +1,29 @@
+{% load i18n %}
 <section id="static_analysis">
     {% if analysis.static %}
         {% if analysis.static.pe_timestamp %}
             <div>
-                <h4><span class="glyphicon glyphicon-time" aria-hidden="true"></span> PE Compile Time</h4>
+                <h4><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {% trans "PE Compile Time" %}</h4>
                 <div class="well">{{analysis.static.pe_timestamp}}</div>
             </div>
             <hr />
         {% endif %}
         {% if analysis.static.pdb_path %}
             <div>
-                <h4>PDB Path</h4>
+                <h4>{% trans "PDB Path" %}</h4>
                 <div class="well">{{analysis.static.pdb_path}}</div>
             </div>
         {% endif %}
         {% if analysis.static.pe_imphash %}
             <div>
-                <h4>PE Imphash</h4>
+                <h4>{% trans "PE Imphash" %}</h4>
                 <div class="well">{{analysis.static.pe_imphash}}</div>
             </div>
             <hr />
         {% endif %}
         {% if analysis.static.signature %}
             <div>
-                <h4>Signing Certificate</h4>
+                <h4>{% trans "Signing Certificate" %}</h4>
                 <div id="pe_signature">
                     {% for cert in analysis.static.signature %}
                     <table class="table table-striped table-bordered">
@@ -39,19 +40,19 @@
                             <td>{{cert.sha1}}</td>
                         </tr>
                         <tr>
-                            <th>Serial Number</th>
+                            <th>{% trans "Serial Number" %}</th>
                             <td>{{cert.serial_number}}</td>
                         </tr>
                         <tr>
-                            <th>Common Name</th>
+                            <th>{% trans "Common Name" %}</th>
                             <td>{{cert.common_name}}</td>
                         </tr>
                         <tr>
-                            <th>Country</th>
+                            <th>{% trans "Country" %}</th>
                             <td>{{cert.country}}</td>
                         </tr>
                         <tr>
-                            <th>Locality</th>
+                            <th>{% trans "Locality" %}</th>
                             <td>{{cert.locality}}</td>
                         </tr>
                     </table>
@@ -62,7 +63,7 @@
         {% endif %}
         {% if analysis.static.pe_versioninfo %}
             <div>
-                <h4>Version Infos</h4>
+                <h4>{% trans "Version Infos" %}</h4>
                 <div id="pe_versioninfo">
                     <table class="table table-striped table-bordered">
                         <colgroup>
@@ -82,7 +83,7 @@
         {% endif %}
         {% if analysis.static.peid_signatures %}
             <div>
-                <h4>PEiD Signatures</h4>
+                <h4>{% trans "PEiD Signatures" %}</h4>
                 <div id="peid_signatures">
                     <table class="table table-striped table-bordered">
                     {% for sig in analysis.static.peid_signatures %}
@@ -95,15 +96,15 @@
         {% endif %}
         {% if analysis.static.pe_sections %}
             <div>
-                <h4>Sections</h4>
+                <h4>{% trans "Sections" %}</h4>
                 <div id="pe_sections">
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <th>Name</th>
-                            <th>Virtual Address</th>
-                            <th>Virtual Size</th>
-                            <th>Size of Raw Data</th>
-                            <th>Entropy</th>
+                            <th>{% trans "Name" %}</th>
+                            <th>{% trans "Virtual Address" %}</th>
+                            <th>{% trans "Virtual Size" %}</th>
+                            <th>{% trans "Size of Raw Data" %}</th>
+                            <th>{% trans "Entropy" %}</th>
                         </tr>
                         {% for section in analysis.static.pe_sections %}
                             <tr>
@@ -126,12 +127,12 @@
                 <div id="pe_resources">
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <th>Name</th>
-                            <th>Offset</th>
-                            <th>Size</th>
-                            <th>Language</th>
-                            <th>Sub-language</th>
-                            <th>File type</th>
+                            <th>{% trans "Name" %}</th>
+                            <th>{% trans "Offset" %}</th>
+                            <th>{% trans "Size" %}</th>
+                            <th>{% trans "Language" %}</th>
+                            <th>{% trans "Sub-language" %}</th>
+                            <th>{% trans "File type" %}</th>
                         </tr>
                         {% for section in analysis.static.pe_resources %}
                             <tr>
@@ -151,11 +152,11 @@
 
         {% if analysis.static.pe_imports %}
             <div>
-                <h4>Imports</h4>
+                <h4>{% trans "Imports" %}</h4>
                 <div id="pe_imports">
                     {% for library in analysis.static.pe_imports %}
                         <div class="well">
-                            <div><strong>Library {{library.dll}}</strong>:</div>
+                            <div><strong>{% trans "Library" %} {{library.dll}}</strong>:</div>
                             {% for function in library.imports %}
                                 <div>&bull; <span class="mono">{{function.address}} <a href="http://social.msdn.microsoft.com/Search/en-US/windows/desktop?query={{function.name}}">{{function.name}}</a></span></div>
                             {% endfor %}
@@ -168,13 +169,13 @@
 
         {% if analysis.static.pe_exports %}
             <div>
-                <h4>Exports</h4>
+                <h4>{% trans "Exports" %}</h4>
                 <div id="pe_exports">
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <th>Ordinal</th>
-                            <th>Address</th>
-                            <th>Name</th>
+                            <th>{% trans "Ordinal" %}</th>
+                            <th>{% trans "Address" %}</th>
+                            <th>{% trans "Name" %}</th>
                         </tr>
                         {% for export in analysis.static.pe_exports %}
                             <tr>
@@ -188,6 +189,6 @@
             </div>
         {% endif %}
     {% else %}
-        Nothing to display.
+        {% trans "Nothing to display." %}
     {% endif %}
 </section>

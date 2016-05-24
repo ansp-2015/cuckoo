@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% load analysis_tags %}
 <script src="{% static "js/hexdump.js" %}"></script>
 <section id="tcp" class="tcpudp">
@@ -8,10 +8,10 @@
             <div class="col-md-6">
                 <table class="table table-bordered">
                     <tr>
-                        <th>Source</th>
-                        <th>Source Port</th>
-                        <th>Destination</th>
-                        <th>Destination Port</th>
+                        <th>{% trans "Source" %}</th>
+                        <th>{% trans "Source Port" %}</th>
+                        <th>{% trans "Destination" %}</th>
+                        <th>{% trans "Destination Port" %}</th>
                     </tr>
                     {% for p in analysis.network.tcp %}
                         <tr class="connrow" data="{{p.src}},{{p.sport}},{{p.dst}},{{p.dport}},tcp">
@@ -26,7 +26,7 @@
             <div class="stream col-md-6"></div>
         </div>
     {% else %}
-        <p>No TCP connections recorded.</p>
+        <p>{% trans "No TCP connections recorded." %}</p>
     {% endif %}
 </section>
 <script type='text/javascript'>

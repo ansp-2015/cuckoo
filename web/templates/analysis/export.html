@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
 <style>
 .btn-file {
@@ -33,7 +33,11 @@ input[readonly] {
             <div class="tabbable">
                 <div class="tab-content">
                     <div class="tab-pane fade in active" id="file">
-                        <label style="display: flex; color: #337ab7;">Chosen analysis nr.{{analysis.info.id}} to export </label>
+                        <label style="display: flex; color: #337ab7;">
+                            {% blocktrans with id=analysis.info.id trimmed %}
+                            Chosen analysis nr.{{id}} to export
+                            {% endblocktrans %}
+                        </label>
                         <div class="input-group col-md-6">
                             {% if analysis.info.category == "file" %}
                             <input type="text" class="form-control" value="{{analysis.target.file.name}}" disabled>
@@ -50,7 +54,7 @@ input[readonly] {
             <div class="panel" id="accordion" style="margin-top: 20px;">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <label class=accordion-toggle" style="color: #337ab7;">Select which files you want to include in the export</label>
+                        <label class=accordion-toggle" style="color: #337ab7;">{% trans "Select which files you want to include in the export" %}</label>
                     </div>
                     <div id="options" class="panel-collapse collapse in" style="text-align: left;">
                         <div class="panel-body">
@@ -69,7 +73,7 @@ input[readonly] {
                 </div>
             </div>
             <div style="margin-top: 20px;">
-                <button type="submit" class="btn btn-primary btn-lg">Export</button>
+                <button type="submit" class="btn btn-primary btn-lg">{% trans "Export" %}</button>
             </div>
         </form>
     </div>

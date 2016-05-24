@@ -1,13 +1,14 @@
+{% load i18n %}
 <table class="table table-bordered" style="table-layout: fixed;">
     <thead>
         <tr>
-            <th>Index</th>
-            <th>Table</th>
-            <th>Entry</th>
-            <th>Syscall Name</th>
-            <th>Syscall Addr</th>
-            <th>Syscall Modname</th>
-            <th>Hook?</th>
+            <th>{% trans "Index" %}</th>
+            <th>{% trans "Table" %}</th>
+            <th>{% trans "Entry" %}</th>
+            <th>{% trans "Syscall Name" %}</th>
+            <th>{% trans "Syscall Addr" %}</th>
+            <th>{% trans "Syscall Modname" %}</th>
+            <th>{% trans "Hook?" %}</th>
         </tr>
     </thead>
     <tbody>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-19 13:04-0300\n"
+"POT-Creation-Date: 2016-05-24 19:06-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,15 +46,216 @@ msgstr ""
 msgid "No analysis found with specified ID"
 msgstr "Nenhuma análise encontrada com o ID informado"
 
-#: templates/analysis/export.html:53
+#: templates/analysis/admin/index.html:5
+#: templates/analysis/search_results.html:12
+msgid "Task ID"
+msgstr ""
+
+#: templates/analysis/admin/index.html:9
+msgid "Mongo ID"
+msgstr ""
+
+#: templates/analysis/admin/index.html:13
+msgid "Cuckoo release"
+msgstr ""
+
+#: templates/analysis/admin/index.html:18
+msgid "Delete"
+msgstr ""
+
+#: templates/analysis/behavior/_api_call.html:40
+msgid "success"
+msgstr ""
+
+#: templates/analysis/behavior/_api_call.html:42
+msgid "failed"
+msgstr ""
+
+#: templates/analysis/behavior/_api_call.html:50
+msgid "times"
+msgstr ""
+
+#: templates/analysis/behavior/_api_call.html:52
+msgid "time"
+msgstr ""
+
+#: templates/analysis/behavior/_chunk.html:4
+#: templates/analysis/behavior/_search_results.html:22
+#: templates/analysis/overview/_signatures.html:51
+msgid "Time &amp; API"
+msgstr ""
+
+#: templates/analysis/behavior/_chunk.html:5
+#: templates/analysis/behavior/_search_results.html:23
+#: templates/analysis/overview/_signatures.html:52
+msgid "Arguments"
+msgstr ""
+
+#: templates/analysis/behavior/_chunk.html:6
+#: templates/analysis/behavior/_search_results.html:24
+#: templates/analysis/index.html:85
+#: templates/analysis/overview/_signatures.html:53
+msgid "Status"
+msgstr "Estado"
+
+#: templates/analysis/behavior/_chunk.html:7
+#: templates/analysis/behavior/_search_results.html:25
+#: templates/analysis/overview/_signatures.html:54
+msgid "Return"
+msgstr ""
+
+#: templates/analysis/behavior/_chunk.html:8
+#: templates/analysis/behavior/_search_results.html:26
+#: templates/analysis/overview/_signatures.html:55
+msgid "Repeated"
+msgstr ""
+
+#: templates/analysis/behavior/_search.html:21
+#: templates/analysis/search.html:12
+#, fuzzy
+#| msgid "Search"
+msgid "Search term"
+msgstr "Busca"
+
+#: templates/analysis/behavior/_search.html:24
+#: templates/analysis/search.html:15 templates/header.html:34
+msgid "Search"
+msgstr "Busca"
+
+#: templates/analysis/behavior/_search_results.html:9
+msgid "Results"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:11
+msgid "network"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:12
+msgid "filesystem"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:13
+msgid "registry"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:14
+msgid "process"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:15
+msgid "services"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:16
+msgid "synchronization"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:33
+msgid "Process"
+msgstr ""
+
+#: templates/analysis/behavior/_search_results.html:45
+msgid "No results"
+msgstr ""
+
+#: templates/analysis/behavior/_tree.html:2
+msgid "Process Tree"
+msgstr ""
+
+#: templates/analysis/buffers/index.html:7
+#: templates/analysis/dropped/index.html:7
+#: templates/analysis/memory/_modscan.html:7
+#: templates/analysis/memory/_pslist.html:7
+#: templates/analysis/memory/_svcscan.html:5
+#: templates/analysis/network/_dns.html:7
+#: templates/analysis/overview/_info.html:62
+#: templates/analysis/static/_pe32.html:103
+#: templates/analysis/static/_pe32.html:130
+#: templates/analysis/static/_pe32.html:178
+msgid "Name"
+msgstr ""
+
+#: templates/analysis/buffers/index.html:11
+#: templates/analysis/dropped/index.html:30
+#: templates/analysis/memory/_modscan.html:9
+#: templates/analysis/overview/_file.html:8
+#: templates/analysis/static/_pe32.html:132
+msgid "Size"
+msgstr "Tamanho"
+
+#: templates/analysis/buffers/index.html:15
+#: templates/analysis/dropped/index.html:44
+#: templates/analysis/memory/_callbacks.html:5
+#: templates/analysis/memory/_gdt.html:9
+#: templates/analysis/memory/_svcscan.html:9
+#: templates/analysis/network/_irc.html:8
+#: templates/analysis/overview/_file.html:23
+msgid "Type"
+msgstr "Tipo"
+
+#: templates/analysis/buffers/index.html:48
+#: templates/analysis/dropped/index.html:77
+msgid "None matched"
+msgstr ""
+
+#: templates/analysis/buffers/index.html:54
+#: templates/analysis/dropped/index.html:83
+msgid "Search for analysis"
+msgstr ""
+
+#: templates/analysis/buffers/index.html:59
+#: templates/analysis/dropped/index.html:13
+#: templates/analysis/overview/_file.html:13
+msgid "Download"
+msgstr ""
+
+#: templates/analysis/buffers/index.html:66
+msgid "<b>Sorry!</b> No dropped buffers."
+msgstr ""
+
+#: templates/analysis/dropped/index.html:16
+#, fuzzy
+#| msgid "Submit"
+msgid "Submit file"
+msgstr "Enviar"
+
+#: templates/analysis/dropped/index.html:25
+#, fuzzy
+#| msgid "Files"
+msgid "Filepath"
+msgstr "Arquivos"
+
+#: templates/analysis/dropped/index.html:35
+#: templates/analysis/overview/_summary.html:10
+msgid "Processes"
+msgstr ""
+
+#: templates/analysis/dropped/index.html:89
+msgid "<b>Sorry!</b> No dropped files."
+msgstr ""
+
+#: templates/analysis/export.html:37
+#, python-format
+msgid "Chosen analysis nr.%(id)s to export"
+msgstr ""
+
+#: templates/analysis/export.html:57
 msgid "Select which files you want to include in the export"
 msgstr "Selecione quais arquivos você quer incluir no arquivo a ser exportado"
 
-#: templates/analysis/export.html:72
+#: templates/analysis/export.html:76
 msgid "Export"
 msgstr "Exportar"
 
-#: templates/analysis/index.html:5
+#: templates/analysis/import.html:61
+msgid "Choose analysis to import (Only .zip)"
+msgstr ""
+
+#: templates/analysis/import.html:74 templates/header.html:36
+msgid "Import"
+msgstr "Importar"
+
+#: templates/analysis/index.html:5 templates/analysis/overview/_summary.html:6
 msgid "Files"
 msgstr "Arquivos"
 
@@ -105,37 +306,509 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: templates/analysis/index.html:85
-msgid "Status"
-msgstr "Estado"
-
 #: templates/analysis/index.html:122
 msgid "No URLs analyzed yet"
 msgstr "Nehuma URL ainda analisada"
 
+#: templates/analysis/memory/_apihooks.html:6
+#: templates/analysis/memory/_malfind.html:6
+msgid "Process Name"
+msgstr ""
+
+#: templates/analysis/memory/_apihooks.html:7
+msgid "Victim Function"
+msgstr ""
+
+#: templates/analysis/memory/_apihooks.html:8
+#, fuzzy
+#| msgid "Type"
+msgid "Hook Type"
+msgstr "Tipo"
+
+#: templates/analysis/memory/_apihooks.html:9
+msgid "Hooking Module"
+msgstr ""
+
+#: templates/analysis/memory/_callbacks.html:6
+msgid "Callback"
+msgstr ""
+
+#: templates/analysis/memory/_callbacks.html:7
+#: templates/analysis/memory/_idt.html:9
+#: templates/analysis/memory/_messagehooks.html:12
+#: templates/analysis/memory/_timers.html:10
+msgid "Module"
+msgstr ""
+
+#: templates/analysis/memory/_callbacks.html:8
+msgid "Details"
+msgstr ""
+
+#: templates/analysis/memory/_devicetree.html:5
+msgid "Driver Name"
+msgstr ""
+
+#: templates/analysis/memory/_devicetree.html:6
+msgid "Driver Offset"
+msgstr ""
+
+#: templates/analysis/memory/_devicetree.html:7
+msgid "Devices"
+msgstr ""
+
+#: templates/analysis/memory/_gdt.html:6 templates/analysis/memory/_idt.html:7
+#, fuzzy
+#| msgid "Select"
+msgid "Selector"
+msgstr "Selecione"
+
+#: templates/analysis/memory/_gdt.html:7
+msgid "Base"
+msgstr ""
+
+#: templates/analysis/memory/_gdt.html:8
+msgid "Limit"
+msgstr ""
+
+#: templates/analysis/memory/_gdt.html:10
+msgid "Dpl"
+msgstr ""
+
+#: templates/analysis/memory/_gdt.html:11
+msgid "Granularity"
+msgstr ""
+
+#: templates/analysis/memory/_gdt.html:12
+msgid "Present"
+msgstr ""
+
+#: templates/analysis/memory/_idt.html:6 templates/analysis/memory/_ssdt.html:5
+msgid "Index"
+msgstr ""
+
+#: templates/analysis/memory/_idt.html:8
+#: templates/analysis/static/_pe32.html:177
+msgid "Address"
+msgstr ""
+
+#: templates/analysis/memory/_idt.html:10
+msgid "Section"
+msgstr ""
+
+#: templates/analysis/memory/_malfind.html:7
+msgid "Start"
+msgstr ""
+
+#: templates/analysis/memory/_malfind.html:8
+msgid "Tag"
+msgstr ""
+
+#: templates/analysis/memory/_messagehooks.html:5
+#: templates/analysis/memory/_modscan.html:6
+#: templates/analysis/memory/_netscan.html:5
+#: templates/analysis/memory/_sockscan.html:5
+#: templates/analysis/memory/_svcscan.html:11
+#: templates/analysis/memory/_timers.html:5
+#: templates/analysis/static/_pe32.html:131
+msgid "Offset"
+msgstr ""
+
+#: templates/analysis/memory/_messagehooks.html:6
+msgid "Session"
+msgstr ""
+
+#: templates/analysis/memory/_messagehooks.html:7
+msgid "Desktop"
+msgstr ""
+
+#: templates/analysis/memory/_messagehooks.html:8
+msgid "Thread"
+msgstr ""
+
+#: templates/analysis/memory/_messagehooks.html:9
+msgid "Filter"
+msgstr ""
+
+#: templates/analysis/memory/_messagehooks.html:10
+msgid "Flags"
+msgstr ""
+
+#: templates/analysis/memory/_messagehooks.html:11
+msgid "Function"
+msgstr ""
+
+#: templates/analysis/memory/_modscan.html:5
+msgid "Base Address"
+msgstr ""
+
+#: templates/analysis/memory/_modscan.html:8
 #: templates/analysis/overview/_file.html:3 templates/submission/index.html:59
 #, fuzzy
 #| msgid "Files"
 msgid "File"
 msgstr "Arquivos"
 
-#: templates/analysis/overview/_file.html:8
-msgid "Size"
-msgstr "Tamanho"
+#: templates/analysis/memory/_netscan.html:7
+#: templates/analysis/memory/_sockscan.html:7
+msgid "Local Address"
+msgstr ""
 
-#: templates/analysis/overview/_file.html:13
-msgid "Download"
+#: templates/analysis/memory/_netscan.html:8
+#: templates/analysis/memory/_sockscan.html:8
+msgid "Local Port"
+msgstr ""
+
+#: templates/analysis/memory/_netscan.html:9
+msgid "Remote Address"
+msgstr ""
+
+#: templates/analysis/memory/_netscan.html:10
+msgid "Remote Port"
+msgstr ""
+
+#: templates/analysis/memory/_netscan.html:11
+#: templates/analysis/memory/_sockscan.html:9
+msgid "Protocol"
+msgstr ""
+
+#: templates/analysis/memory/_pslist.html:5
+msgid "Parent PID"
+msgstr ""
+
+#: templates/analysis/memory/_pslist.html:8
+msgid "Create Time"
+msgstr ""
+
+#: templates/analysis/memory/_pslist.html:9
+msgid "Exit Time"
+msgstr ""
+
+#: templates/analysis/memory/_pslist.html:10
+msgid "# Threads"
+msgstr ""
+
+#: templates/analysis/memory/_pslist.html:11
+msgid "# Handles"
+msgstr ""
+
+#: templates/analysis/memory/_pslist.html:12
+msgid "Session ID"
+msgstr ""
+
+#: templates/analysis/memory/_sockscan.html:10
+msgid "Creation Time"
+msgstr ""
+
+#: templates/analysis/memory/_ssdt.html:6
+msgid "Table"
+msgstr ""
+
+#: templates/analysis/memory/_ssdt.html:7
+msgid "Entry"
+msgstr ""
+
+#: templates/analysis/memory/_ssdt.html:8
+msgid "Syscall Name"
+msgstr ""
+
+#: templates/analysis/memory/_ssdt.html:9
+msgid "Syscall Addr"
+msgstr ""
+
+#: templates/analysis/memory/_ssdt.html:10
+msgid "Syscall Modname"
+msgstr ""
+
+#: templates/analysis/memory/_ssdt.html:11
+msgid "Hook?"
+msgstr ""
+
+#: templates/analysis/memory/_svcscan.html:6
+msgid "Display Name"
+msgstr ""
+
+#: templates/analysis/memory/_svcscan.html:7
+msgid "Binary Path"
+msgstr ""
+
+#: templates/analysis/memory/_svcscan.html:10
+msgid "Order"
+msgstr ""
+
+#: templates/analysis/memory/_svcscan.html:12 templates/dashboard/index.html:32
+#, fuzzy
+#| msgid "Status"
+msgid "State"
+msgstr "Estado"
+
+#: templates/analysis/memory/_timers.html:6
+msgid "Due Time"
+msgstr ""
+
+#: templates/analysis/memory/_timers.html:7
+msgid "Period"
+msgstr ""
+
+#: templates/analysis/memory/_timers.html:8
+msgid "Signaled"
+msgstr ""
+
+#: templates/analysis/memory/_timers.html:9
+msgid "Routine"
+msgstr ""
+
+#: templates/analysis/memory/_yarascan.html:5
+msgid "Owner"
+msgstr ""
+
+#: templates/analysis/memory/_yarascan.html:6
+msgid "Rule"
+msgstr ""
+
+#: templates/analysis/memory/_yarascan.html:7
+msgid "Hexdump"
+msgstr ""
+
+#: templates/analysis/memory/index.html:3
+msgid "Download Full Memory Dump"
+msgstr ""
+
+#: templates/analysis/memory/index.html:7
+msgid "Process List"
+msgstr ""
+
+#: templates/analysis/memory/index.html:8
+msgid "Services"
+msgstr ""
+
+#: templates/analysis/memory/index.html:9
+msgid "Kernel Modules"
+msgstr ""
+
+#: templates/analysis/memory/index.html:10
+msgid "Device Tree"
+msgstr ""
+
+#: templates/analysis/memory/index.html:11
+msgid "Code Injection"
+msgstr ""
+
+#: templates/analysis/memory/index.html:12
+msgid "Timers"
+msgstr ""
+
+#: templates/analysis/memory/index.html:13
+msgid "Messagehooks"
+msgstr ""
+
+#: templates/analysis/memory/index.html:14
+msgid "API Hooks"
+msgstr ""
+
+#: templates/analysis/memory/index.html:15
+msgid "Callbacks"
+msgstr ""
+
+#: templates/analysis/memory/index.html:16
+msgid "Yarascan"
+msgstr ""
+
+#: templates/analysis/memory/index.html:17
+msgid "SSDT"
+msgstr ""
+
+#: templates/analysis/memory/index.html:18
+msgid "IDT"
+msgstr ""
+
+#: templates/analysis/memory/index.html:19
+msgid "GDT"
+msgstr ""
+
+#: templates/analysis/memory/index.html:20
+msgid "Sockets"
+msgstr ""
+
+#: templates/analysis/network/_dns.html:8
+#: templates/analysis/network/_http.html:15
+msgid "Response"
+msgstr ""
+
+#: templates/analysis/network/_dns.html:9
+msgid "Post-Analysis Lookup"
+msgstr ""
+
+#: templates/analysis/network/_dns.html:50
+msgid "No domains contacted."
+msgstr ""
+
+#: templates/analysis/network/_hosts.html:3
+msgid "Hosts"
+msgstr ""
+
+#: templates/analysis/network/_hosts.html:16
+msgid "(dead IP/port - was unable to connect during analysis)"
+msgstr ""
+
+#: templates/analysis/network/_hosts.html:25
+msgid "No hosts contacted."
+msgstr ""
+
+#: templates/analysis/network/_http.html:10
+msgid "HTTP &amp; HTTPS Requests"
+msgstr ""
+
+#: templates/analysis/network/_http.html:14
+msgid "Request"
+msgstr ""
+
+#: templates/analysis/network/_http.html:44
+#: templates/analysis/network/_icmp.html:9
+msgid "Data"
+msgstr ""
+
+#: templates/analysis/network/_http.html:54
+msgid "No HTTP requests performed."
+msgstr ""
+
+#: templates/analysis/network/_icmp.html:2
+msgid "ICMP traffic"
+msgstr ""
+
+#: templates/analysis/network/_icmp.html:6
+#: templates/analysis/network/_tcp.html:11
+#: templates/analysis/network/_udp.html:11
+msgid "Source"
+msgstr ""
+
+#: templates/analysis/network/_icmp.html:7
+#: templates/analysis/network/_tcp.html:13
+#: templates/analysis/network/_udp.html:13
+msgid "Destination"
+msgstr ""
+
+#: templates/analysis/network/_icmp.html:8
+#, fuzzy
+#| msgid "Type"
+msgid "ICMP Type"
+msgstr "Tipo"
+
+#: templates/analysis/network/_icmp.html:21
+msgid "No ICMP traffic performed."
+msgstr ""
+
+#: templates/analysis/network/_irc.html:2
+msgid "IRC traffic"
+msgstr ""
+
+#: templates/analysis/network/_irc.html:6
+msgid "Command"
+msgstr ""
+
+#: templates/analysis/network/_irc.html:7
+msgid "Params"
+msgstr ""
+
+#: templates/analysis/network/_irc.html:19
+msgid "No IRC requests performed."
+msgstr ""
+
+#: templates/analysis/network/_snort.html:2
+msgid "Snort Alerts"
+msgstr ""
+
+#: templates/analysis/network/_snort.html:6
+#: templates/analysis/network/_suricata.html:6
+#: templates/analysis/network/_suricata.html:32
+msgid "Flow"
+msgstr ""
+
+#: templates/analysis/network/_snort.html:8
+msgid "Message"
+msgstr ""
+
+#: templates/analysis/network/_snort.html:23
+msgid "No Snort Alerts"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:2
+msgid "Suricata Alerts"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:8
+#: templates/analysis/static/_antivirus.html:8
+msgid "Signature"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:9
+#: templates/analysis/overview/_info.html:23
+msgid "Category"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:25
+msgid "No Suricata Alerts"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:28
+msgid "Suricata TLS"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:33
+msgid "Issuer"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:34
+msgid "Subject"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:35
+msgid "Fingerprint"
+msgstr ""
+
+#: templates/analysis/network/_suricata.html:52
+msgid "No Suricata TLS"
+msgstr ""
+
+#: templates/analysis/network/_tcp.html:12
+#: templates/analysis/network/_udp.html:12
+msgid "Source Port"
+msgstr ""
+
+#: templates/analysis/network/_tcp.html:14
+#: templates/analysis/network/_udp.html:14
+msgid "Destination Port"
+msgstr ""
+
+#: templates/analysis/network/_tcp.html:29
+msgid "No TCP connections recorded."
+msgstr ""
+
+#: templates/analysis/network/_udp.html:29
+msgid "No UDP connections recorded."
+msgstr ""
+
+#: templates/analysis/network/index.html:4
+#: templates/analysis/network/index.html:14
+msgid "Deprecation note:"
+msgstr ""
+
+#: templates/analysis/network/index.html:15
+#, python-format
+msgid ""
+"You are using version %(current)s of HTTPReplay, rather than the latest "
+"version %(latest)s, which may not handle various corner cases and/or TLS "
+"cipher suites correctly. This could result in not getting all the HTTP/HTTPS "
+"streams that are available or corrupt some streams that were not handled "
+"correctly before. Please upgrade it to the latest version (`pip install --"
+"upgrade httpreplay`)."
 msgstr ""
 
 #: templates/analysis/overview/_file.html:16
 msgid "Resubmit sample"
 msgstr ""
 
-#: templates/analysis/overview/_file.html:23
-msgid "Type"
-msgstr "Tipo"
-
 #: templates/analysis/overview/_info.html:9
+#: templates/analysis/search_results.html:19
 #, fuzzy
 #| msgid "Analysis Package"
 msgid "Analysis"
@@ -147,10 +820,6 @@ msgstr ""
 
 #: templates/analysis/overview/_info.html:15
 msgid "Export analysis"
-msgstr ""
-
-#: templates/analysis/overview/_info.html:23
-msgid "Category"
 msgstr ""
 
 #: templates/analysis/overview/_info.html:24
@@ -190,10 +859,6 @@ msgstr ""
 msgid "Machine"
 msgstr "Máquina"
 
-#: templates/analysis/overview/_info.html:62
-msgid "Name"
-msgstr ""
-
 #: templates/analysis/overview/_info.html:63
 msgid "Label"
 msgstr ""
@@ -206,8 +871,114 @@ msgstr ""
 msgid "Shutdown On"
 msgstr ""
 
+#: templates/analysis/overview/_screenshots.html:3
+msgid "Screenshots"
+msgstr ""
+
+#: templates/analysis/overview/_screenshots.html:13
+msgid "No screenshots available."
+msgstr ""
+
 #: templates/analysis/overview/_signatures.html:20
 msgid "Signatures"
+msgstr ""
+
+#: templates/analysis/overview/_signatures.html:27
+msgid "1 event"
+msgstr ""
+
+#: templates/analysis/overview/_signatures.html:29
+#: templates/analysis/overview/_signatures.html:33
+#, python-format
+msgid "%(marks)s events"
+msgstr ""
+
+#: templates/analysis/overview/_signatures.html:31
+#, python-format
+msgid "%(marks)s out of %(mark)s events"
+msgstr ""
+
+#: templates/analysis/overview/_signatures.html:85
+msgid "No signatures"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:3 templates/analysis/report.html:9
+msgid "Summary"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:7
+msgid "Registry"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:8
+msgid "Mutexes"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:9
+msgid "Directories"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:18
+#: templates/analysis/overview/_summary.html:65
+#: templates/analysis/overview/_summary.html:112
+#: templates/analysis/overview/_summary.html:137
+#: templates/analysis/overview/_summary.html:184
+#, python-format
+msgid "Process %(name)s (%(pid)s)"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:25
+msgid "Opened files"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:36
+msgid "Written files"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:47
+#, fuzzy
+#| msgid "Files"
+msgid "Files Read"
+msgstr "Arquivos"
+
+#: templates/analysis/overview/_summary.html:72
+msgid "Registry keys opened"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:83
+msgid "Registry keys written"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:94
+msgid "Registry keys read"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:119
+msgid "Mutexes accessed"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:144
+msgid "Directories created"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:155
+msgid "Directories removed"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:166
+msgid "Directories enumerated"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:191
+msgid "Processes created"
+msgstr ""
+
+#: templates/analysis/overview/_summary.html:202
+msgid "DLLs Loaded"
+msgstr ""
+
+#: templates/analysis/overview/_url.html:3
+msgid "URL Details"
 msgstr ""
 
 #: templates/analysis/overview/index.html:14
@@ -270,6 +1041,214 @@ msgstr "Tarefas pendentes"
 msgid "No pending tasks."
 msgstr "Nenhum tarefa pendente"
 
+#: templates/analysis/procmemory/index.html:6
+#, python-format
+msgid "Process memory dump for PID <b>%(pid)s</b> (dump %(num)s)"
+msgstr ""
+
+#: templates/analysis/procmemory/index.html:16
+msgid "Extracted/injected images (may contain unpacked executables)"
+msgstr ""
+
+#: templates/analysis/procmemory/index.html:25
+msgid "Yara signatures matches on process memory"
+msgstr ""
+
+#: templates/analysis/procmemory/index.html:27
+msgid "Match:"
+msgstr ""
+
+#: templates/analysis/procmemory/index.html:37
+msgid "URLs found in process memory"
+msgstr ""
+
+#: templates/analysis/report.html:13 templates/analysis/static/index.html:4
+#, fuzzy
+#| msgid "Analysis Package"
+msgid "Static Analysis"
+msgstr "Pacote de análises"
+
+#: templates/analysis/report.html:18
+#, fuzzy
+#| msgid "disable behavioral analysis"
+msgid "Behavioral Analysis"
+msgstr "desabilita análise comportamental"
+
+#: templates/analysis/report.html:25 templates/analysis/report.html.py:30
+#, fuzzy
+#| msgid "Analysis Package"
+msgid "Network Analysis"
+msgstr "Pacote de análises"
+
+#: templates/analysis/report.html:37
+msgid "Dropped Files"
+msgstr ""
+
+#: templates/analysis/report.html:43
+msgid "Dropped Buffers"
+msgstr ""
+
+#: templates/analysis/report.html:47
+#, fuzzy
+#| msgid "Process Memory Dump"
+msgid "Process Memory"
+msgstr "Processar \"dump\" de memória"
+
+#: templates/analysis/search.html:7
+msgid ""
+"For details on how to perform searches, get some <a href=\"#help\" data-"
+"toggle=\"collapse\">help</a>"
+msgstr ""
+
+#: templates/analysis/search_results.html:7
+#, fuzzy
+#| msgid "Search"
+msgid "Search Results"
+msgstr "Busca"
+
+#: templates/analysis/search_results.html:13
+msgid "Matches"
+msgstr ""
+
+#: templates/analysis/search_results.html:29
+msgid "more matches"
+msgstr ""
+
+#: templates/analysis/search_results.html:37
+msgid "No results found."
+msgstr ""
+
+#: templates/analysis/static/_antivirus.html:6
+#: templates/analysis/static/index.html:6
+msgid "Antivirus"
+msgstr ""
+
+#: templates/analysis/static/_antivirus.html:10
+msgid "Result"
+msgstr ""
+
+#: templates/analysis/static/_antivirus.html:19
+msgid "Clean"
+msgstr ""
+
+#: templates/analysis/static/_antivirus.html:38
+#, fuzzy
+#| msgid "No files analyzed yet"
+msgid "Your file is being analysed"
+msgstr "Nenhum arquivo ainda analisado"
+
+#: templates/analysis/static/_antivirus.html:40
+msgid "No antivirus signatures available."
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:6
+msgid "PE Compile Time"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:13
+msgid "PDB Path"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:19
+msgid "PE Imphash"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:26
+msgid "Signing Certificate"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:43
+msgid "Serial Number"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:47
+msgid "Common Name"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:51
+msgid "Country"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:55
+msgid "Locality"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:66
+msgid "Version Infos"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:86
+msgid "PEiD Signatures"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:99
+#, fuzzy
+#| msgid "Options"
+msgid "Sections"
+msgstr "Opções"
+
+#: templates/analysis/static/_pe32.html:104
+msgid "Virtual Address"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:105
+msgid "Virtual Size"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:106
+msgid "Size of Raw Data"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:107
+msgid "Entropy"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:133
+msgid "Language"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:134
+msgid "Sub-language"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:135
+#, fuzzy
+#| msgid "Files"
+msgid "File type"
+msgstr "Arquivos"
+
+#: templates/analysis/static/_pe32.html:155
+#, fuzzy
+#| msgid "Import"
+msgid "Imports"
+msgstr "Importar"
+
+#: templates/analysis/static/_pe32.html:159
+msgid "Library"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:172
+#, fuzzy
+#| msgid "Export"
+msgid "Exports"
+msgstr "Exportar"
+
+#: templates/analysis/static/_pe32.html:176
+msgid "Ordinal"
+msgstr ""
+
+#: templates/analysis/static/_pe32.html:192
+msgid "Nothing to display."
+msgstr ""
+
+#: templates/analysis/static/index.html:5
+msgid "Strings"
+msgstr ""
+
+#: templates/analysis/static/index.html:13
+msgid "No static analysis available."
+msgstr ""
+
 #: templates/dashboard/index.html:5
 #, python-format
 msgid ""
@@ -293,23 +1272,21 @@ msgstr "Número de amostras"
 msgid "States"
 msgstr "Estados"
 
-#: templates/dashboard/index.html:32
-#, fuzzy
-#| msgid "Status"
-msgid "State"
-msgstr "Estado"
-
 #: templates/dashboard/index.html:33
 msgid "Count"
 msgstr ""
 
-#: templates/error.html:4
+#: templates/error.html:4 templates/standalone_error.html:2
 msgid "ERROR"
 msgstr "ERRO"
 
 #: templates/footer.html:6
 msgid "Back to the top"
 msgstr "Voltar para o topo"
+
+#: templates/header.html:22
+msgid "Toggle navigation"
+msgstr ""
 
 #: templates/header.html:31
 msgid "Dashboard"
@@ -323,17 +1300,9 @@ msgstr "Recentes"
 msgid "Pending"
 msgstr "Pendente"
 
-#: templates/header.html:34
-msgid "Search"
-msgstr "Busca"
-
 #: templates/header.html:35
 msgid "Submit"
 msgstr "Enviar"
-
-#: templates/header.html:36
-msgid "Import"
-msgstr "Importar"
 
 #: templates/submission/index.html:66
 msgid "Chosen file to resubmit"
@@ -437,4 +1406,8 @@ msgstr ""
 
 #: templates/submission/index.html:198
 msgid "Analyze"
+msgstr ""
+
+#: templates/success.html:5
+msgid "Great!"
 msgstr ""

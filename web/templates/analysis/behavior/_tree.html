@@ -1,4 +1,5 @@
-<h4>Process Tree</h4>
+{% load i18n %}
+<h4>{% trans "Process Tree" %}</h4>
 <ul>
 {% for process in analysis.behavior.processtree|filter_key_if_has:"track" %}
     {% include "analysis/behavior/_tree_process.html" %}

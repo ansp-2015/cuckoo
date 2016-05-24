@@ -1,12 +1,13 @@
+{% load i18n %}
 <table class="table table-bordered" style="table-layout: fixed;">
     <thead>
         <tr>
-            <th>Offset</th>
-            <th>Due Time</th>
-            <th>Period</th>
-            <th>Signaled</th>
-            <th>Routine</th>
-            <th>Module</th>
+            <th>{% trans "Offset" %}</th>
+            <th>{% trans "Due Time" %}</th>
+            <th>{% trans "Period" %}</th>
+            <th>{% trans "Signaled" %}</th>
+            <th>{% trans "Routine" %}</th>
+            <th>{% trans "Module" %}</th>
         </tr>
     </thead>
     <tbody>
@@ -17,7 +18,7 @@
             <td class="{{ row.class_ }}">{{row.period}}</td>
             <td class="{{ row.class_ }}">{{row.signaled}}</td>
             <td class="{{ row.class_ }}"><span class="mono">{{row.routine}}</span></td>
-            <td class="{{ row.class_ }}">{{row.module}}</span></td>
+            <td class="{{ row.class_ }}">{{row.module}}</td>
         </tr>
     {% endfor %}
     </tbody>

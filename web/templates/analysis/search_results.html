@@ -4,19 +4,19 @@
 {% if analyses %}
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Search Results</h3>
+            <h3 class="panel-title">{% trans "Search Results" %}</h3>
         </div>
         <table class="table table-striped" style="table-layout: fixed;">
             <thead>
             <tr>
-                <th style="width: 10%">Task ID</th>
-                <th style="width: 90%">Matches</th>
+                <th style="width: 10%">{% trans "Task ID" %}</th>
+                <th style="width: 90%">{% trans "Matches" %}</th>
             </tr>
             </thead>
             <tbody>
             {% for analysis in analyses %}
                 <tr>
-                    <td><a href="{% url "analysis.views.report" analysis.task_id %}">Analysis #{{ analysis.task_id }}</a></td>
+                    <td><a href="{% url "analysis.views.report" analysis.task_id %}">{% trans "Analysis" %} #{{ analysis.task_id }}</a></td>
                     <td style="word-wrap: break-word;">
                         <table>
                         {% for key, value in analysis.matches %}
@@ -26,7 +26,7 @@
                             </tr>
                         {% endfor %}
                         </table>
-                        {% if analysis.total %}<div>({{ analysis.total }} more matches)</div>{% endif %}
+                        {% if analysis.total %}<div>({{ analysis.total }} {% trans "more matches" %})</div>{% endif %}
                     </td>
                 </tr>
             {% endfor %}
@@ -34,7 +34,7 @@
         </table>
     </div>
 {% elif analyses != None %}
-    <div class="alert alert-info" style="text-align: center;"><b>No results found.</b></div>
+    <div class="alert alert-info" style="text-align: center;"><b>{% trans "No results found." %}</b></div>
 {% else %}
     {% if error %}
         <div class="alert alert-error" style="text-align: center;"><b>{{ error }}</b></div>

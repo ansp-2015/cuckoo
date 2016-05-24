@@ -37,9 +37,9 @@
 </td>
 <td>
     {% if call.status %}
-        success
+        {% trans "success" %}
     {% else %}
-        failed
+        {% trans "failed" %}
     {% endif %}
 </td>
 <td><span class="mono">{{call.return_value}}</span></td>
@@ -47,9 +47,9 @@
     {% if call.repeated %}
         {{call.repeated}}
         {% if call.repeated > 1 %}
-            times
+            {% trans "times" %}
         {% else %}
-            time
+            {% trans "time" %}
         {% endif %}
     {% else %}
         0

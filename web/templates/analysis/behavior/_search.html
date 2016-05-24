@@ -1,3 +1,4 @@
+{% load i18n %}
 <script type="text/javascript">
 $(function () {
 	$('#search button[type=submit]').on('click', function(event) {
@@ -17,10 +18,10 @@ $(function () {
 	<form id='search' class="form-inline" role="form" action="{% url "analysis.views.search_behavior" analysis.info.id %}">
 		{% csrf_token %}
     	<div class="form-group">
-        	<label class="sr-only" for="form_search">Search term</label>
+        	<label class="sr-only" for="form_search">{% trans "Search term" %}</label>
         	<input type="text" class="form-control" id="form_search" name="search" size=50 placeholder="Search term" />
     	</div>
-		<button type="submit" class="btn btn-primary">Search</button>
+		<button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
 	</form>
 
 	<div id="search-results">

@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
 <ul class="nav nav-tabs">
-    <li class="active"><a href="#files" data-toggle="tab">Files</a></li>
-    <li><a href="#urls" data-toggle="tab">URLs</a></li>
+    <li class="active"><a href="#files" data-toggle="tab">{% trans "Files" %}</a></li>
+    <li><a href="#urls" data-toggle="tab">{% trans "URLs" %}</a></li>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane fade in active" id="files">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Recent Files</h3>
+                <h3 class="panel-title">{% trans "Recent Files" %}</h3>
             </div>
             {% if files %}
             <table class="table table-striped" style="table-layout: fixed;">
@@ -44,11 +44,11 @@
                         </td>
                         <td>
                             {% if analysis.status == "pending" %}
-                                <span class="text-muted">pending</span>
+                                <span class="text-muted">{% trans "pending" %}</span>
                             {% elif analysis.status == "running" %}
-                                <span class="text-warning">running</span>
+                                <span class="text-warning">{% trans "running" %}</span>
                             {% elif analysis.status == "completed" %}
-                                <span class="text-info">completed</span>
+                                <span class="text-info">{% trans "completed" %}</span>
                             {% elif analysis.status == "reported" %}
                                 {% if analysis.errors %}
                                     <span class="text-danger">
@@ -56,7 +56,7 @@
                                     <span class="text-success">
                                 {% endif%}
 
-                                reported</span>
+                                {% trans "reported" %}</span>
                             {% else %}
                                 <span class="text-danger">{{analysis.status}}</span>
                             {% endif %}
@@ -66,7 +66,7 @@
                 </tbody>
             </table>
             {% else %}
-            <div class="panel-body">No files analyzed yet.</div>
+            <div class="panel-body">{% trans "No files analyzed yet" %}.</div>
             {% endif %}
         </div>
     </div>
@@ -74,15 +74,15 @@
     <div class="tab-pane fade" id="urls">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Recent URLs</h3>
+                <h3 class="panel-title">{% trans "Recent URLs" %}</h3>
             </div>
             {% if urls %}
             <table class="table table-striped" style="table-layout: fixed;">
                 <thead>
                 <tr>
-                    <th>Timestamp</th>
-                    <th>URL</th>
-                    <th>Status</th>
+                    <th>{% trans "Timestamp" %}</th>
+                    <th>{% trans "URL" %}</th>
+                    <th>{% trans "Status" %}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -103,13 +103,13 @@
                             {% endif %}
                         <td>
                             {% if analysis.status == "pending" %}
-                                <span class="text-muted">pending</span>
+                                <span class="text-muted">{% trans "pending" %}</span>
                             {% elif analysis.status == "running" %}
-                                <span class="text-warning">running</span>
+                                <span class="text-warning">{% trans "running" %}</span>
                             {% elif analysis.status == "completed" %}
-                                <span class="text-info">completed</span>
+                                <span class="text-info">{% trans "completed" %}</span>
                             {% elif analysis.status == "reported" %}
-                                <span class="text-success">reported</span>
+                                <span class="text-success">{% trans "reported" %}</span>
                             {% else %}
                                 <span class="text-danger">{{analysis.status}}</span>
                             {% endif %}
@@ -119,7 +119,7 @@
                 </tbody>
             </table>
             {% else %}
-            <div class="panel-body">No URLs analyzed yet.</div>
+            <div class="panel-body">{% trans "No URLs analyzed yet" %}.</div>
             {% endif %}
         </div>
     </div>

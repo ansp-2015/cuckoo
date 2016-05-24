@@ -1,22 +1,25 @@
+{% load i18n %}
 {% if not httpreplay.have %}
 <div class="alert alert-warning">
-    <strong>Deprecation note:</strong>
-    While processing this analysis you did not have the httpreplay Python
+    <strong>{% trans "Deprecation note:" %}</strong>
+    {% trans "While processing this analysis you did not have the httpreplay Python
     library installed. Installing this library (i.e., pip install httpreplay)
     will allow Cuckoo to do more proper PCAP analysis including but not
     limited to showing full HTTP and HTTPS (!) requests and responses.
     It is recommended that you install this library and possibly reprocess any
-    interesting analysis tasks.
+    interesting analysis tasks." %}
 </div>
 {% elif httpreplay.deprecated %}
 <div class="alert alert-warning">
-    <strong>Deprecation note:</strong>
-    You are using version {{ httpreplay.current_version }} of HTTPReplay,
-    rather than the latest version {{ httpreplay.latest_version }}, which may
+    <strong>{% trans "Deprecation note:" %}</strong>
+    {% blocktrans with current=httpreplay.current_version latest=httpreplay.latest_version trimmed %}
+    You are using version {{ current }} of HTTPReplay,
+    rather than the latest version {{ latest }}, which may
     not handle various corner cases and/or TLS cipher suites correctly. This
     could result in not getting all the HTTP/HTTPS streams that are available
     or corrupt some streams that were not handled correctly before. Please
     upgrade it to the latest version (`pip install --upgrade httpreplay`).
+    {% endblocktrans %}
 </div>
 {% endif %}
 

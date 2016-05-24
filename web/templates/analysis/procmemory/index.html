@@ -1,14 +1,19 @@
+{% load i18n %}
 {% if analysis.procmemory %}
     {% for proc in analysis.procmemory %}
         <div class="panel panel-default">
-            <div class="panel-heading"><h3 class="panel-title">Process memory dump for PID <b>{{proc.pid}}</b> (dump {{proc.num}})</h3></div>
+            <div class="panel-heading"><h3 class="panel-title">
+                {% blocktrans with pid=proc.pid num=proc.num trimmed %}
+                Process memory dump for PID <b>{{pid}}</b> (dump {{num}})
+                {% endblocktrans %}
+            </h3></div>
             <div class="panel-body">
                 {% if proc.procmem_id %}
                     <a class="btn btn-primary btn-small" href="{% url "analysis.views.file" "memdump" proc.procmem_id %}">Download</a>
                 {% endif %}
 
                 {% if proc.extracted %}
-                    <b>Extracted/injected images (may contain unpacked executables)</b>
+                    <b>{% trans "Extracted/injected images (may contain unpacked executables)" %}</b>
                     <ul>
                     {% for extracted in proc.extracted %}
                         <li><a href="{% url "analysis.views.file" "procmem_extracted" extracted.extracted_id %}" class="btn btn-primary btn-small">Download</a></li>
@@ -17,9 +22,9 @@
                 {% endif %}
 
                 {% if proc.yara %}
-                    <b>Yara signatures matches on process memory</b>
+                    <b>{% trans "Yara signatures matches on process memory" %}</b>
                     {% for match in proc.yara %}
-                        <p>Match: {{match.name}}
+                        <p>{% trans "Match:" %} {{match.name}}
                         <ul>
                         {% for string in match.strings %}
                             <li>{{string}}</li>
@@ -29,7 +34,7 @@
                 {% endif %}
 
                 {% if proc.urls %}
-                    <b>URLs found in process memory</b>
+                    <b>{% trans "URLs found in process memory" %}</b>
                     <ul>
                     {% for url in proc.urls %}
                         <li>{{url}}</li>

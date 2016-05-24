@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
 <style>
 .btn-file {
@@ -58,7 +58,7 @@ $(document).ready( function() {
                 <div class="tab-content">
                     <div class="tab-pane fade in active" id="file">
                         
-                        <label style="display: flex; color: #337ab7;">Choose analysis to import (Only .zip)</label>
+                        <label style="display: flex; color: #337ab7;">{% trans "Choose analysis to import (Only .zip)" %}</label>
                         <input name="category" type="text" class="form-control hidden" value="file">
                         <div class="input-group col-md-6">
                             <span class="input-group-btn">
@@ -71,7 +71,7 @@ $(document).ready( function() {
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 20px;"><button type="submit" class="btn btn-primary btn-lg">Import</button></div>
+            <div style="margin-top: 20px;"><button type="submit" class="btn btn-primary btn-lg">{% trans "Import" %}</button></div>
         </form>
     </div>
 </div>
