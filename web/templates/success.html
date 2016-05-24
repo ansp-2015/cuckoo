@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
 <p style="margin-bottom: 10px;"><img src="{% static "graphic/cuckoo.png" %}" /></p>
-<div class="alert alert-success"><b>Great! :-)</b><br />{{message}}</div>
+<div class="alert alert-success"><b>{% trans "Great!" %} :-)</b><br />{{message}}</div>
 {% endblock %}
