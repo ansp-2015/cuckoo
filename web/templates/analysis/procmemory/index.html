@@ -3,8 +3,8 @@
     {% for proc in analysis.procmemory %}
         <div class="panel panel-default">
             <div class="panel-heading"><h3 class="panel-title">
-                {% blocktrans with pid=proc.pid num=proc.num trimmed %}
-                Process memory dump for PID <b>{{pid}}</b> (dump {{num}})
+                {% blocktrans with panalysis=proc.pid|process_name:analysis pid=proc.pid num=proc.num trimmed %}
+                Process memory dump for PID <b>{{ panalysis }}</b> (PID {{ pid }}, dump {{ num }})
                 {% endblocktrans %}
             </h3></div>
             <div class="panel-body">
@@ -16,7 +16,9 @@
                     <b>{% trans "Extracted/injected images (may contain unpacked executables)" %}</b>
                     <ul>
                     {% for extracted in proc.extracted %}
+                        {% if extracted.extracted_id %}
                         <li><a href="{% url "analysis.views.file" "procmem_extracted" extracted.extracted_id %}" class="btn btn-primary btn-small">Download</a></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
                 {% endif %}
