@@ -8,6 +8,7 @@ import sys
 from django.conf import settings
 from django.shortcuts import render
 from django.views.decorators.http import require_safe
+from django.utils.translation import ugettext_lazy as _
 
 sys.path.append(settings.CUCKOO_PATH)
 
@@ -20,7 +21,7 @@ def left(request, left_id):
     left = results_db.analysis.find_one({"info.id": int(left_id)}, {"target": 1, "info": 1})
     if not left:
         return render(request, "error.html", {
-            "error": "No analysis found with specified ID",
+            "error": _("No analysis found with specified ID"),
         })
 
     if left["target"]["category"] == "url":
@@ -56,7 +57,7 @@ def hash(request, left_id, right_hash):
     left = results_db.analysis.find_one({"info.id": int(left_id)}, {"target": 1, "info": 1})
     if not left:
         return render(request, "error.html", {
-            "error": "No analysis found with specified ID",
+            "error": _("No analysis found with specified ID"),
         })
 
     # If the analysis is not of a file, but of a URL, we consider the hash

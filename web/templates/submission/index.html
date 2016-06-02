@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
 <style>
 .btn-file {
@@ -56,14 +56,14 @@ $(document).ready( function() {
             <div class="tabbable">
                 {% if not resubmit %}
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#file" data-toggle="tab"><span class="glyphicon glyphicon-file"></span> File</a></li>
-                    <li><a href="#url" data-toggle="tab"><span class="glyphicon glyphicon-globe"></span> URL</a></li>
+                    <li class="active"><a href="#file" data-toggle="tab"><span class="glyphicon glyphicon-file"></span> {% trans "File" %}</a></li>
+                    <li><a href="#url" data-toggle="tab"><span class="glyphicon glyphicon-globe"></span> {% trans "URL" %}</a></li>
                 </ul>
                 {% endif %}
                 <div class="tab-content">
                     <div class="tab-pane fade {% if not resubmit or resubmit == "file" %}in active{% endif %}" id="file">
                         {% if resubmit == "file" %}
-                        <label style="display: flex; color: #337ab7;">Chosen file to resubmit</label>
+                        <label style="display: flex; color: #337ab7;">{% trans "Chosen file to resubmit" %}</label>
                         <input name="category" type="text" class="form-control hidden" value="file">
                         {% if dropped_file %}
                         <input name="category" type="text" class="form-control hidden" value="dropped_file">
@@ -77,7 +77,7 @@ $(document).ready( function() {
                             {% else %}
                                 <input type="text" class="form-control" readonly>
                                 <span class="btn btn-primary btn-file">
-                                    Select <input type="file" name="sample" multiple="multiple">
+                                    {% trans "Select" %} <input type="file" name="sample" multiple="multiple">
                                 </span>
                             {% endif %}
                             </span>
@@ -85,11 +85,11 @@ $(document).ready( function() {
                     </div>
                     <div class="tab-pane fade {% if resubmit == "URL" %}in active{% endif %}" id="url">
                         {% if resubmit == "URL" %}
-                        <label style="display: flex; color: #337ab7;">Chosen URL to resubmit</label>
+                        <label style="display: flex; color: #337ab7;">{% trans "Chosen URL to resubmit" %}</label>
                         <input name="category" type="text" class="form-control hidden" value="URL">
                         {% endif %}
                         <div style="width: 100%;" class="input-group">
-                            <label class="sr-only" form="form_url">URL</label>
+                            <label class="sr-only" form="form_url">{% trans "URL" %}</label>
                             <input type="text" class="form-control" id="form_url" name="url" placeholder="URL" {% if url %} value="{{url}}" {% endif %} />
                         </div>
                     </div>
@@ -98,11 +98,11 @@ $(document).ready( function() {
             <div class="panel" id="accordion" style="margin-top: 20px;">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <strong>Network routing through <i>dirty line</i> or VPN</strong>
+                        <strong>{% trans "Network routing through <i>dirty line</i> or VPN" %}</strong>
                     </div>
                     <div class="panel-body">
                         <select class="form-control" id="form_route" name="route">
-                            <option value="none">None (no internet access)</option>
+                            <option value="none">{% trans "None (no internet access)" %}</option>
                             {% if internet != "none" %}
                                 <option value="internet"{% if route == "internet" %} selected{% endif %}>Internet (dirty line, {{ internet }})</option>
                             {% endif %}
@@ -116,37 +116,37 @@ $(document).ready( function() {
             <div class="panel" id="accordion" style="margin-top: 20px;">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#options"><i class="icon icon-cog"></i> Advanced Options</a>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#options"><i class="icon icon-cog"></i> {% trans "Advanced Options" %}</a>
                     </div>
                     <div id="options" class="panel-collapse collapse {% if resubmit %}in{% endif %}" style="text-align: left;">
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="form_package">Analysis Package</label>
+                                <label for="form_package">{% trans "Analysis Package" %}</label>
                                 <select class="form-control" id="form_package" name="package">
-                                    <option value="" active>Detect Automatically</option>
+                                    <option value="" active>{% trans "Detect Automatically" %}</option>
                                     {% for package in packages %}
                                     <option value="{{package}}">{{package}}</option>
                                     {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="form_timeout">Timeout</label>
+                                <label for="form_timeout">{% trans "Timeout" %}</label>
                                 <input type="text" class="form-control" id="form_timeout" name="timeout" />
                             </div>
                             <div class="form-group">
-                                <label for="form_options">Options</label>
+                                <label for="form_options">{% trans "Options" %}</label>
                                 <input type="text" class="form-control" id="form_options" name="options" value="{{ options }}" />
                             </div>
                             <div class="form-group">
-                                <label for="form_priority">Priority</label>
+                                <label for="form_priority">{% trans "Priority" %}</label>
                                 <select class="form-control" id="form_priority" name="priority">
-                                    <option value="1">Low</option>
-                                    <option value="2">Medium</option>
-                                    <option value="3">High</option>
+                                    <option value="1">{% trans "Low" %}</option>
+                                    <option value="2">{% trans "Medium" %}</option>
+                                    <option value="3">{% trans "High" %}</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="form_machine">Machine</label>
+                                <label for="form_machine">{% trans "Machine" %}</label>
                                 <select class="form-control" id="form_machine" name="machine">
                                 {% for id,label in machines %}
                                     <option value="{{id}}">{{label}}</option>
@@ -154,37 +154,37 @@ $(document).ready( function() {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="form_custom">Custom</label>
+                                <label for="form_custom">{% trans "Custom" %}</label>
                                 <input type="text" class="form-control" id="form_custom" name="custom" />
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="free" /> No Injection <span class="text-muted"><small>(disable behavioral analysis)</small></span>
+                                    <input type="checkbox" name="free" /> {% trans "No Injection" %} <span class="text-muted"><small>({% trans "disable behavioral analysis" %})</small></span>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="process_memory" checked /> Process Memory Dump
+                                    <input type="checkbox" name="process_memory" checked /> {% trans "Process Memory Dump" %}
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="memory" /> Full Memory Dump <span class="text-muted"><small>(if the "memory" processing module is enabled, will launch a Volatility analysis)</small></span>
+                                    <input type="checkbox" name="memory" /> {% trans "Full Memory Dump" %} <span class="text-muted"><small>({% blocktrans %}if the "memory" processing module is enabled, will launch a Volatility analysis{% endblocktrans %})</small></span>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="enforce_timeout" /> Enforce Timeout
+                                    <input type="checkbox" name="enforce_timeout" /> {% trans "Enforce Timeout" %}
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="human" checked />Enable Simulated Human Interaction</input>
+                                    <input type="checkbox" name="human" checked />{% trans "Enable Simulated Human Interaction" %}
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="services" />Enable Services <span class="text-muted"><small>(enable simulated environment specified in the auxiliary configuration)</small></span>
+                                    <input type="checkbox" name="services" />{% trans "Enable Services" %} <span class="text-muted"><small>({% trans "enable simulated environment specified in the auxiliary configuration" %})</small></span>
                                 </label>
                             </div>
                             <div class="form-group">
@@ -195,7 +195,7 @@ $(document).ready( function() {
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 20px;"><button type="submit" class="btn btn-primary btn-lg">Analyze</button></div>
+            <div style="margin-top: 20px;"><button type="submit" class="btn btn-primary btn-lg">{% trans "Analyze" %}</button></div>
         </form>
     </div>
 </div>

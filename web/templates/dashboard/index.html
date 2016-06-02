@@ -1,34 +1,36 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
 <div class="alert alert-info" style="text-align: center;font-size: 22px;">
-    Estimating ~<b>{{report.estimate_hour}}</b> analysis per hour, <b>{{report.estimate_day}}</b> per day.
+{% blocktrans with estimate_hour=report.estimate_hour estimate_day=report.estimate_day trimmed %}
+    Estimating ~<b>{{estimate_hour}}</b> analysis per hour, <b>{{estimate_day}}</b> per day.
+{% endblocktrans %}
 </div>
 
 <div class="row">
     <div class="col-xs-6">
         <div class="jumbotron" style="text-align: center;">
             <h1>{{report.total_tasks}}</h1>
-            Total tasks
+            {% trans "Total tasks" %}
         </div>
     </div>
     <div class="col-xs-6">
         <div class="jumbotron" style="text-align: center;">
             <h1>{{report.total_samples}}</h1>
-            Total samples
+            {% trans "Total samples" %}
         </div>
     </div>
 </div>
 
 <div class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">States</h3>
+        <h3 class="panel-title">{% trans "States" %}</h3>
     </div>
     <table class="table table-striped" style="table-layout: fixed;">
         <thead>
         <tr>
-            <th>State</th>
-            <th>Count</th>
+            <th>{% trans "State" %}</th>
+            <th>{% trans "Count" %}</th>
         </tr>
         </thead>
         <tbody>

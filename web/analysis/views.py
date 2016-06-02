@@ -252,7 +252,7 @@ def report(request, task_id):
 
     if not report:
         return render(request, "error.html", {
-            "error": "The specified analysis does not exist",
+            "error": _("The specified analysis does not exist"),
         })
 
     # Creating dns information dicts by domain and ip.
@@ -367,7 +367,7 @@ def full_memory_dump_file(request, analysis_number):
         return response
     else:
         return render(request, "error.html", {
-            "error": "File not found",
+            "error": _("File not found"),
         })
 
 def _search_helper(obj, k, value):
@@ -523,7 +523,7 @@ def pcapstream(request, task_id, conntuple):
 
     if not conndata:
         return render(request, "standalone_error.html", {
-            "error": "The specified analysis does not exist",
+            "error": _(u"The specified analysis does not exist"),
         })
 
     try:
@@ -537,7 +537,7 @@ def pcapstream(request, task_id, conntuple):
         offset = stream["offset"]
     except:
         return render(request, "standalone_error.html", {
-            "error": _("Could not find the requested stream"),
+            "error": _(u"Could not find the requested stream"),
         })
 
     try:
@@ -545,7 +545,7 @@ def pcapstream(request, task_id, conntuple):
         setattr(fobj, "fileno", lambda: -1)
     except:
         return render(request, "standalone_error.html", {
-            "error": "The required sorted PCAP does not exist",
+            "error": _(u"The required sorted PCAP does not exist"),
         })
 
     packets = list(network.packets_for_stream(fobj, offset))
@@ -561,15 +561,15 @@ def export_analysis(request, task_id):
     )
     if not report:
         return render(request, "error.html", {
-            "error": "The specified analysis does not exist",
+            "error": _(u"The specified analysis does not exist"),
         })
 
     if "analysis_path" not in report.get("info", {}):
         return render(request, "error.html", {
-            "error": "The analysis was created before the export "
-                     "functionality was integrated with Cuckoo and is "
-                     "therefore not available for this task (in order to "
-                     "export this analysis, please reprocess its report)."
+            "error": _(u"The analysis was created before the export "
+                     u"functionality was integrated with Cuckoo and is "
+                     u"therefore not available for this task (in order to "
+                     u"export this analysis, please reprocess its report).")
         })
 
     analysis_path = report["info"]["analysis_path"]
@@ -594,7 +594,7 @@ def export(request, task_id):
     taken_files = request.POST.getlist("files")
     if not taken_dirs and not taken_files:
         return render(request, "error.html", {
-            "error": "Please select at least one directory or file to be exported."
+            "error": _(u"Please select at least one directory or file to be exported.")
         })
 
     report = results_db.analysis.find_one(
@@ -602,7 +602,7 @@ def export(request, task_id):
     )
     if not report:
         return render(request, "error.html", {
-            "error": "The specified analysis does not exist",
+            "error": _(u"The specified analysis does not exist"),
         })
 
     path = report["info"]["analysis_path"]
@@ -646,7 +646,7 @@ def import_analysis(request):
     for analysis in analyses:
         if not analysis.size:
             return render(request, "error.html", {
-                "error": "You uploaded an empty analysis.",
+                "error": _(u"You uploaded an empty analysis."),
             })
 
         # if analysis.size > settings.MAX_UPLOAD_SIZE:
@@ -656,7 +656,7 @@ def import_analysis(request):
 
         if not analysis.name.endswith(".zip"):
             return render(request, "error.html", {
-                "error": "You uploaded an analysis that wasn't a .zip.",
+                "error": _(u"You uploaded an analysis that wasn't a .zip."),
             })
 
         zf = zipfile.ZipFile(analysis)
@@ -666,8 +666,8 @@ def import_analysis(request):
         for filename in zf.namelist():
             if filename.startswith("/") or ".." in filename or ":" in filename:
                 return render(request, "error.html", {
-                    "error": "The zip file contains incorrect filenames, "
-                             "please provide a legitimate .zip file.",
+                    "error": _("The zip file contains incorrect filenames, "
+                             "please provide a legitimate .zip file."),
                 })
 
         if "analysis.json" in zf.namelist():
@@ -682,7 +682,7 @@ def import_analysis(request):
             analysis_info = {
                 "target": {
                     "category": "url",
-                    "url": "unknown",
+                    "url": _("unknown"),
                 },
             }
 
@@ -709,7 +709,7 @@ def import_analysis(request):
             url = analysis_info["target"]["url"]
             if not url:
                 return render(request, "error.html", {
-                    "error": "You specified an invalid URL!",
+                    "error": _("You specified an invalid URL!"),
                 })
 
             task_id = db.add_url(url=url,

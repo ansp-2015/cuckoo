@@ -9,10 +9,11 @@ import time
 from django.conf import settings
 from django.shortcuts import render
 from django.views.decorators.http import require_safe
+from django.utils.translation import ugettext_lazy as _
 
 sys.path.append(settings.CUCKOO_PATH)
 
-from lib.cuckoo.core.database import Database, TASK_PENDING, TASK_RUNNING
+from lib.cuckoo.core.database import Database, TASK_PENDING as tp, TASK_RUNNING
 from lib.cuckoo.core.database import TASK_COMPLETED, TASK_RECOVERED, TASK_REPORTED
 from lib.cuckoo.core.database import TASK_FAILED_ANALYSIS, TASK_FAILED_PROCESSING, TASK_FAILED_REPORTING
 
@@ -24,6 +25,8 @@ def timestamp(dt):
 
 @require_safe
 def index(request):
+    TASK_PENDING = _(tp)
+
     db = Database()
 
     report = dict(

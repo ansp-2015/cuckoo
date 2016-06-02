@@ -26,11 +26,11 @@
             {% if signature.marks|length == 1 %}
             ({% trans "1 event" %})
             {% elif signature.markcount == signature.marks|length %}
-            ({% blocktrans with marks=signature.marks|lenght %}{{ marks }} events{% endblocktrans %})
+            ({% blocktrans with marks=signature.marks|length %}{{ marks }} events{% endblocktrans %})
             {% elif signature.markcount %}
-            ({% blocktrans with marks=signature.marks|lenght mark=signature.markcount%}{{ marks }} out of {{ mark }} events{% endblocktrans %})
+            ({% blocktrans with marks=signature.marks|length mark=signature.markcount%}{{ marks }} out of {{ mark }} events{% endblocktrans %})
             {% else %}
-            ({% blocktrans with marks=signature.marks|lenght %}{{ marks }} events{% endblocktrans %})
+            ({% blocktrans with marks=signature.marks|length %}{{ marks }} events{% endblocktrans %})
             {% endif %}
         {% endif %}
         </div></a>

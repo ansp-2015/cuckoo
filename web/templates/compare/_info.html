@@ -1,17 +1,18 @@
+{% load i18n %}
 <table class="table table-striped table-bordered">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Category</th>
+            <th>{% trans "Category" %}</th>
             {% if record.target.category == "url" %}
             <th>URL</th>
             {% else %}
-            <th>Name</th>
+            <th>{% trans "Name" %}</th>
             <th>MD5</th>
             {% endif %}
-            <th>Machine</th>
-            <th>Completed On</th>
-            <th>Duration</th>
+            <th>{% trans "Machine" %}</th>
+            <th>{% trans "Completed On" %}</th>
+            <th>{% trans "Duration" %}</th>
         </tr>
     </thead>
     <tbody>
@@ -26,7 +27,7 @@
             {% endif %}
             <td>{{record.info.machine.name}}</td>
             <td>{{record.info.ended}}</td>
-            <td>{{record.info.duration}} seconds</td>
+            <td>{{record.info.duration}} {% trans "seconds" %}</td>
         </tr>
     </tbody>
 </table>

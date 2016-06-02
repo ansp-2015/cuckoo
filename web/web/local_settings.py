@@ -5,6 +5,13 @@
 
 LOCAL_SETTINGS = True
 from settings import *
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+LOCALE_PATHS = (
+    '%s/locale' % BASE_DIR,
+)
+
+print LOCALE_PATHS
 
 # If you want to customize your cuckoo path set it here.
 # CUCKOO_PATH = "/where/cuckoo/is/placed/"

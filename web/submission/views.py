@@ -16,6 +16,7 @@ from lib.cuckoo.common.config import Config, parse_options, emit_options
 from lib.cuckoo.common.utils import store_temp_file
 from lib.cuckoo.core.database import Database
 from lib.cuckoo.core.rooter import vpns
+from django.utils.translation import ugettext_lazy as _
 
 results_db = settings.MONGO
 cfg = Config()
@@ -155,11 +156,11 @@ def index(request, task_id=None, sha1=None):
                     continue
 
                 return render(request, "error.html", {
-                    "error": "You uploaded an empty file.",
+                    "error": _("You uploaded an empty file."),
                 })
             elif sample.size > settings.MAX_UPLOAD_SIZE:
                 return render(request, "error.html", {
-                    "error": "You uploaded a file that exceeds that maximum allowed upload size.",
+                    "error": _("You uploaded a file that exceeds that maximum allowed upload size."),
                 })
 
             # Moving sample from django temporary file to Cuckoo temporary
@@ -203,7 +204,7 @@ def index(request, task_id=None, sha1=None):
         url = request.POST.get("url").strip()
         if not url:
             return render(request, "error.html", {
-                "error": "You specified an invalid URL!",
+                "error": _("You specified an invalid URL!"),
             })
 
         for entry in task_machines:
@@ -229,14 +230,14 @@ def index(request, task_id=None, sha1=None):
         })
     else:
         return render(request, "error.html", {
-            "error": "Error adding task to Cuckoo's database.",
+            "error": _("Error adding task to Cuckoo's database."),
         })
 
 def status(request, task_id):
     task = Database().view_task(task_id)
     if not task:
         return render(request, "error.html", {
-            "error": "The specified task doesn't seem to exist.",
+            "error": _("The specified task doesn't seem to exist."),
         })
 
     if task.status == "reported":
@@ -255,7 +256,7 @@ def resubmit(request, task_id):
 
     if not task:
         return render(request, "error.html", {
-            "error": "No Task found with this ID",
+            "error": _("No Task found with this ID"),
         })
 
     if task.category == "file":
@@ -279,7 +280,7 @@ def submit_dropped(request, task_id, sha1):
     task = Database().view_task(task_id)
     if not task:
         return render(request, "error.html", {
-            "error": "No Task found with this ID",
+            "error": _("No Task found with this ID"),
         })
 
     filepath = dropped_filepath(task_id, sha1)

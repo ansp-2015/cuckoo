@@ -1,5 +1,5 @@
 {% load i18n %}
-<h4><span class="glyphicon glyphicon-off" aria-hidden-"true"></span> Information on Execution</h4>
+<h4><span class="glyphicon glyphicon-off" aria-hidden-"true"></span> {% trans "Information on Execution" %}</h4>
 
 <div class="row">
     <div class="col-md-6">
@@ -32,16 +32,12 @@
                             <td>{{analysis.info.category|upper}}</td>
                             <td>{{analysis.info.started}}</td>
                             <td>{{analysis.info.ended}}</td>
-<<<<<<< HEAD
                             <td>{{analysis.info.duration}} {% trans "seconds" %}</td>
-                            <td><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#info-log">{% trans "Show Log" %}</a></td>
-=======
-                            <td>{{analysis.info.duration}} seconds</td>
+                            <td>{{analysis.info.duration}} {% trans "seconds" %}</td>
                             <td>
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#info-log">Show Analyzer Log</a><br />
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#info-cuckoo">Show Cuckoo Log</a>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#info-log">{% trans "Show Analyzer Log" %}</a><br />
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#info-cuckoo">{% trans "Show Cuckoo Log" %}</a>
                             </td>
->>>>>>> upstream/master
                         </tr>
                     </tbody>
                 </table>
@@ -50,7 +46,7 @@
             {% if analysis.debug.errors %}
                 <ul style="font-size: 16px;">
                 {% for error in analysis.debug.errors %}
-                    <li class="text-danger"><b>{% trans "Error" %}:</b> {{error}}</li>
+                    <li class="text-danger"><b>{% trans "Error" %}:</b> {% trans error %}</li>
                 {% endfor %}
                 </ul>
             {% endif %}
