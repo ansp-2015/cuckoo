@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-31 16:40-0300\n"
+"POT-Creation-Date: 2016-06-10 15:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,13 +61,14 @@ msgid ""
 "Cuckoo and is therefore not available for this task (in order to export this "
 "analysis, please reprocess its report)."
 msgstr ""
-"Esta análise foi criada antes que a funcionalidade de exportação fosse integrada "
-"ao Cuckoo e portanto não está disponível para esta tarefa (para exportar esta "
-"análise, por favor processe novamente seu relatório)"
+"Esta análise foi criada antes que a funcionalidade de exportação fosse "
+"integrada ao Cuckoo e portanto não está disponível para esta tarefa (para "
+"exportar esta análise, por favor processe novamente seu relatório)"
 
 #: analysis/views.py:597
 msgid "Please select at least one directory or file to be exported."
-msgstr "Por favor, selecione pelo menos um diretório ou arquivo a ser exportado."
+msgstr ""
+"Por favor, selecione pelo menos um diretório ou arquivo a ser exportado."
 
 #: analysis/views.py:649
 msgid "You uploaded an empty analysis."
@@ -97,13 +98,22 @@ msgstr "A URL especificada é inválida"
 msgid "No analysis found with specified ID"
 msgstr "Nenhuma análise encontrada com o ID informado"
 
+#: submission/views.py:75
+msgid "First available"
+msgstr "Primeira disponível"
+
+#: submission/views.py:76
+msgid "All"
+msgstr "Todas"
+
 #: submission/views.py:159
 msgid "You uploaded an empty file."
 msgstr "Você enviou um arquivo vazio."
 
 #: submission/views.py:163
 msgid "You uploaded a file that exceeds that maximum allowed upload size."
-msgstr "Você enviou um arquivo que excede o tamanaho máximo permitido para envio"
+msgstr ""
+"Você enviou um arquivo que excede o tamanaho máximo permitido para envio"
 
 #: submission/views.py:233
 msgid "Error adding task to Cuckoo's database."
@@ -118,7 +128,7 @@ msgid "No Task found with this ID"
 msgstr "Nenhuma encontrada encontrada com o ID informado"
 
 #: templates/analysis/admin/index.html:5
-#: templates/analysis/search_results.html:12
+#: templates/analysis/search_results.html:13
 msgid "Task ID"
 msgstr "ID da tarefa"
 
@@ -128,7 +138,7 @@ msgstr "ID do mongo"
 
 #: templates/analysis/admin/index.html:13
 msgid "Cuckoo release"
-msgstr ""
+msgstr "Versão do Cuckoo"
 
 #: templates/analysis/admin/index.html:18
 msgid "Delete"
@@ -150,39 +160,40 @@ msgstr "vezes"
 msgid "time"
 msgstr "vez"
 
-#: templates/analysis/behavior/_chunk.html:4
+#: templates/analysis/behavior/_chunk.html:5
 #: templates/analysis/behavior/_search_results.html:22
 #: templates/analysis/overview/_signatures.html:51
 msgid "Time &amp; API"
-msgstr "Tempo &amp; API"
+msgstr "Horário &amp; API"
 
-#: templates/analysis/behavior/_chunk.html:5
+#: templates/analysis/behavior/_chunk.html:6
 #: templates/analysis/behavior/_search_results.html:23
 #: templates/analysis/overview/_signatures.html:52
 msgid "Arguments"
 msgstr "Argumentos"
 
-#: templates/analysis/behavior/_chunk.html:6
+#: templates/analysis/behavior/_chunk.html:7
 #: templates/analysis/behavior/_search_results.html:24
-#: templates/analysis/index.html:85
+#: templates/analysis/index.html:22 templates/analysis/index.html.py:85
 #: templates/analysis/overview/_signatures.html:53
+#: templates/analysis/pending.html:15
 msgid "Status"
 msgstr "Estado"
 
-#: templates/analysis/behavior/_chunk.html:7
+#: templates/analysis/behavior/_chunk.html:8
 #: templates/analysis/behavior/_search_results.html:25
 #: templates/analysis/overview/_signatures.html:54
 msgid "Return"
 msgstr "Retorno"
 
-#: templates/analysis/behavior/_chunk.html:8
+#: templates/analysis/behavior/_chunk.html:9
 #: templates/analysis/behavior/_search_results.html:26
 #: templates/analysis/overview/_signatures.html:55
 msgid "Repeated"
 msgstr "Repetido"
 
 #: templates/analysis/behavior/_search.html:21
-#: templates/analysis/search.html:12
+#: templates/analysis/search.html:12 templates/analysis/search.html.py:13
 msgid "Search term"
 msgstr "Termo de busca"
 
@@ -197,7 +208,7 @@ msgid "Results"
 msgstr "Resultados"
 
 #: templates/analysis/behavior/_search_results.html:11
-#: templates/compare/both.html:29
+#: templates/compare/both.html:27
 msgid "network"
 msgstr "rede"
 
@@ -206,22 +217,22 @@ msgid "filesystem"
 msgstr "sistema de arquivos"
 
 #: templates/analysis/behavior/_search_results.html:13
-#: templates/compare/both.html:26
+#: templates/compare/both.html:24
 msgid "registry"
 msgstr "registro"
 
 #: templates/analysis/behavior/_search_results.html:14
-#: templates/compare/both.html:30
+#: templates/compare/both.html:28
 msgid "process"
 msgstr "processo"
 
 #: templates/analysis/behavior/_search_results.html:15
-#: templates/compare/both.html:31
+#: templates/compare/both.html:29
 msgid "services"
 msgstr "serviços"
 
 #: templates/analysis/behavior/_search_results.html:16
-#: templates/compare/both.html:32
+#: templates/compare/both.html:30
 msgid "synchronization"
 msgstr "sincronização"
 
@@ -271,7 +282,7 @@ msgstr "Tipo"
 #: templates/analysis/buffers/index.html:48
 #: templates/analysis/dropped/index.html:77
 msgid "None matched"
-msgstr ""
+msgstr "Nenhuma correspondência"
 
 #: templates/analysis/buffers/index.html:54
 #: templates/analysis/dropped/index.html:83
@@ -286,7 +297,7 @@ msgstr ""
 
 #: templates/analysis/buffers/index.html:66
 msgid "<b>Sorry!</b> No dropped buffers."
-msgstr ""
+msgstr "<b>Desculpe</b>Nenhum buffer esvaziado."
 
 #: templates/analysis/dropped/index.html:16
 msgid "Submit file"
@@ -299,16 +310,16 @@ msgstr "Caminho dos arquivos"
 #: templates/analysis/dropped/index.html:35
 #: templates/analysis/overview/_summary.html:10
 msgid "Processes"
-msgstr ""
+msgstr "Processos"
 
 #: templates/analysis/dropped/index.html:89
 msgid "<b>Sorry!</b> No dropped files."
-msgstr ""
+msgstr "<b>Desculpe!</b>Nenhum arquivo apagado."
 
 #: templates/analysis/export.html:37
 #, python-format
 msgid "Chosen analysis nr.%(id)s to export"
-msgstr ""
+msgstr "Escolhida análise nº %(id)s para exportar"
 
 #: templates/analysis/export.html:57
 msgid "Select which files you want to include in the export"
@@ -338,25 +349,38 @@ msgstr ""
 msgid "Recent Files"
 msgstr "Arquivos recentes"
 
+#: templates/analysis/index.html:19 templates/analysis/index.html.py:83
+#: templates/analysis/pending.html:12
+msgid "Timestamp"
+msgstr ""
+
+#: templates/analysis/index.html:20
+msgid "Filename"
+msgstr "Nome do Arquivo"
+
+#: templates/analysis/index.html:32 templates/analysis/pending.html:25
+msgid "added on"
+msgstr "horário em que foi adicionado"
+
 #: templates/analysis/index.html:47 templates/analysis/index.html.py:106
-#: templates/analysis/pending.html:32
+#: templates/analysis/pending.html:32 web/translation_strings.py:28
 msgid "pending"
 msgstr "pendente"
 
 #: templates/analysis/index.html:49 templates/analysis/index.html.py:108
-#: templates/analysis/pending.html:34
+#: templates/analysis/pending.html:34 web/translation_strings.py:26
 msgid "running"
 msgstr "executando"
 
 #: templates/analysis/index.html:51 templates/analysis/index.html.py:110
-#: templates/analysis/pending.html:36
+#: templates/analysis/pending.html:36 web/translation_strings.py:23
 msgid "completed"
 msgstr "completo"
 
 #: templates/analysis/index.html:59 templates/analysis/index.html.py:112
-#: templates/analysis/pending.html:38
+#: templates/analysis/pending.html:38 web/translation_strings.py:25
 msgid "reported"
-msgstr "reportado"
+msgstr "relatório ok"
 
 #: templates/analysis/index.html:69
 msgid "No files analyzed yet"
@@ -365,10 +389,6 @@ msgstr "Nenhum arquivo ainda analisado"
 #: templates/analysis/index.html:77
 msgid "Recent URLs"
 msgstr "URLs recentes"
-
-#: templates/analysis/index.html:83
-msgid "Timestamp"
-msgstr ""
 
 #: templates/analysis/index.html:84 templates/submission/index.html:60
 #: templates/submission/index.html.py:92
@@ -405,7 +425,7 @@ msgstr ""
 #: templates/analysis/memory/_messagehooks.html:12
 #: templates/analysis/memory/_timers.html:10
 msgid "Module"
-msgstr ""
+msgstr "Módulo"
 
 #: templates/analysis/memory/_callbacks.html:8
 msgid "Details"
@@ -466,7 +486,7 @@ msgstr "Início"
 
 #: templates/analysis/memory/_malfind.html:8
 msgid "Tag"
-msgstr ""
+msgstr "Etiqueta"
 
 #: templates/analysis/memory/_messagehooks.html:5
 #: templates/analysis/memory/_modscan.html:6
@@ -504,7 +524,7 @@ msgstr "Função"
 
 #: templates/analysis/memory/_modscan.html:5
 msgid "Base Address"
-msgstr ""
+msgstr "Endereço base"
 
 #: templates/analysis/memory/_modscan.html:8
 #: templates/analysis/overview/_file.html:3 templates/submission/index.html:59
@@ -588,7 +608,7 @@ msgstr ""
 
 #: templates/analysis/memory/_svcscan.html:6
 msgid "Display Name"
-msgstr ""
+msgstr "Nome de exibição"
 
 #: templates/analysis/memory/_svcscan.html:7
 msgid "Binary Path"
@@ -640,11 +660,11 @@ msgstr "Lista de processos"
 
 #: templates/analysis/memory/index.html:8
 msgid "Services"
-msgstr ""
+msgstr "Serviços"
 
 #: templates/analysis/memory/index.html:9
 msgid "Kernel Modules"
-msgstr ""
+msgstr "Módulos do kernel"
 
 #: templates/analysis/memory/index.html:10
 msgid "Device Tree"
@@ -693,7 +713,7 @@ msgstr ""
 #: templates/analysis/network/_dns.html:8
 #: templates/analysis/network/_http.html:15
 msgid "Response"
-msgstr ""
+msgstr "Resposta"
 
 #: templates/analysis/network/_dns.html:9
 msgid "Post-Analysis Lookup"
@@ -701,7 +721,7 @@ msgstr ""
 
 #: templates/analysis/network/_dns.html:50
 msgid "No domains contacted."
-msgstr ""
+msgstr "Nenhum domínio contactado."
 
 #: templates/analysis/network/_hosts.html:3
 msgid "Hosts"
@@ -713,40 +733,40 @@ msgstr ""
 
 #: templates/analysis/network/_hosts.html:25
 msgid "No hosts contacted."
-msgstr ""
+msgstr "Nenhum host contactado."
 
 #: templates/analysis/network/_http.html:10
 msgid "HTTP &amp; HTTPS Requests"
-msgstr ""
+msgstr "Requisições HTTP &amp; HTTPS"
 
 #: templates/analysis/network/_http.html:14
 msgid "Request"
-msgstr ""
+msgstr "Requisição"
 
 #: templates/analysis/network/_http.html:44
 #: templates/analysis/network/_icmp.html:9
 msgid "Data"
-msgstr ""
+msgstr "Dados"
 
 #: templates/analysis/network/_http.html:54
 msgid "No HTTP requests performed."
-msgstr ""
+msgstr "Nenhuma requisição HTTP feita."
 
 #: templates/analysis/network/_icmp.html:2
 msgid "ICMP traffic"
-msgstr ""
+msgstr "Tráfego ICMP"
 
 #: templates/analysis/network/_icmp.html:6
 #: templates/analysis/network/_tcp.html:11
 #: templates/analysis/network/_udp.html:11
 msgid "Source"
-msgstr ""
+msgstr "Origem"
 
 #: templates/analysis/network/_icmp.html:7
 #: templates/analysis/network/_tcp.html:13
 #: templates/analysis/network/_udp.html:13
 msgid "Destination"
-msgstr ""
+msgstr "Destino"
 
 #: templates/analysis/network/_icmp.html:8
 msgid "ICMP Type"
@@ -754,7 +774,7 @@ msgstr "Tipo de ICMP"
 
 #: templates/analysis/network/_icmp.html:21
 msgid "No ICMP traffic performed."
-msgstr ""
+msgstr "Nenhum tráfego ICMP executado"
 
 #: templates/analysis/network/_irc.html:2
 msgid "IRC traffic"
@@ -762,11 +782,11 @@ msgstr ""
 
 #: templates/analysis/network/_irc.html:6
 msgid "Command"
-msgstr ""
+msgstr "Comando"
 
 #: templates/analysis/network/_irc.html:7
 msgid "Params"
-msgstr ""
+msgstr "Parâmetros"
 
 #: templates/analysis/network/_irc.html:19
 msgid "No IRC requests performed."
@@ -774,21 +794,21 @@ msgstr ""
 
 #: templates/analysis/network/_snort.html:2
 msgid "Snort Alerts"
-msgstr ""
+msgstr "Alertas do Snort"
 
 #: templates/analysis/network/_snort.html:6
 #: templates/analysis/network/_suricata.html:6
 #: templates/analysis/network/_suricata.html:32
 msgid "Flow"
-msgstr ""
+msgstr "Fluxo"
 
 #: templates/analysis/network/_snort.html:8
 msgid "Message"
-msgstr ""
+msgstr "Mensagem"
 
 #: templates/analysis/network/_snort.html:23
 msgid "No Snort Alerts"
-msgstr ""
+msgstr "Nenhum alerta do Snort"
 
 #: templates/analysis/network/_suricata.html:2
 msgid "Suricata Alerts"
@@ -797,12 +817,13 @@ msgstr ""
 #: templates/analysis/network/_suricata.html:8
 #: templates/analysis/static/_antivirus.html:8
 msgid "Signature"
-msgstr ""
+msgstr "Assinatura"
 
 #: templates/analysis/network/_suricata.html:9
-#: templates/analysis/overview/_info.html:23 templates/compare/_info.html:6
+#: templates/analysis/overview/_info.html:23 templates/analysis/pending.html:13
+#: templates/compare/_info.html:6
 msgid "Category"
-msgstr ""
+msgstr "Categoria"
 
 #: templates/analysis/network/_suricata.html:25
 msgid "No Suricata Alerts"
@@ -814,15 +835,15 @@ msgstr ""
 
 #: templates/analysis/network/_suricata.html:33
 msgid "Issuer"
-msgstr ""
+msgstr "Emitente"
 
 #: templates/analysis/network/_suricata.html:34
 msgid "Subject"
-msgstr ""
+msgstr "Assunto"
 
 #: templates/analysis/network/_suricata.html:35
 msgid "Fingerprint"
-msgstr ""
+msgstr "Impressão digital"
 
 #: templates/analysis/network/_suricata.html:52
 msgid "No Suricata TLS"
@@ -840,16 +861,16 @@ msgstr ""
 
 #: templates/analysis/network/_tcp.html:29
 msgid "No TCP connections recorded."
-msgstr ""
+msgstr "Nenhuma conexão RCP registrada."
 
 #: templates/analysis/network/_udp.html:29
 msgid "No UDP connections recorded."
-msgstr ""
+msgstr "Nenhuma conexão UDP registsrada."
 
 #: templates/analysis/network/index.html:4
 #: templates/analysis/network/index.html:14
 msgid "Deprecation note:"
-msgstr ""
+msgstr "Nota de obsolecência:"
 
 #: templates/analysis/network/index.html:15
 #, python-format
@@ -864,10 +885,18 @@ msgstr ""
 
 #: templates/analysis/overview/_file.html:16
 msgid "Resubmit sample"
-msgstr ""
+msgstr "Reenviar amostra"
+
+#: templates/analysis/overview/_file.html:42
+msgid "Show SHA512"
+msgstr "Exibir SHA512"
+
+#: templates/analysis/overview/_info.html:2
+msgid "Information on Execution"
+msgstr "Informações sobre a execução"
 
 #: templates/analysis/overview/_info.html:9
-#: templates/analysis/search_results.html:19
+#: templates/analysis/search_results.html:20
 #, fuzzy
 #| msgid "Analysis Package"
 msgid "Analysis"
@@ -875,15 +904,15 @@ msgstr "Pacote de análises"
 
 #: templates/analysis/overview/_info.html:12
 msgid "Compare analysis to ..."
-msgstr ""
+msgstr "Compare análise a ..."
 
 #: templates/analysis/overview/_info.html:15
 msgid "Export analysis"
-msgstr ""
+msgstr "Exportar análise"
 
 #: templates/analysis/overview/_info.html:24
 msgid "Started"
-msgstr ""
+msgstr "inìcio"
 
 #: templates/analysis/overview/_info.html:25
 msgid "Completed"
@@ -892,24 +921,25 @@ msgstr "Completo"
 #: templates/analysis/overview/_info.html:26 templates/compare/_info.html:15
 #: templates/compare/_summary_table.html:9
 msgid "Duration"
-msgstr ""
+msgstr "Duração"
 
 #: templates/analysis/overview/_info.html:27
 msgid "Logs"
 msgstr ""
 
-#: templates/analysis/overview/_info.html:35 templates/compare/_info.html:30
+#: templates/analysis/overview/_info.html:35
+#: templates/analysis/overview/_info.html:36 templates/compare/_info.html:30
 #: templates/compare/_summary_table.html:24
 msgid "seconds"
 msgstr "segundos"
 
 #: templates/analysis/overview/_info.html:38
 msgid "Show Analyzer Log"
-msgstr ""
+msgstr "Exibir analizador de logs"
 
 #: templates/analysis/overview/_info.html:39
 msgid "Show Cuckoo Log"
-msgstr ""
+msgstr "Exibir log do Cuckoo"
 
 #: templates/analysis/overview/_info.html:49
 msgid "Error"
@@ -922,54 +952,54 @@ msgstr "Máquina"
 
 #: templates/analysis/overview/_info.html:67
 msgid "Label"
-msgstr ""
+msgstr "Rótulo"
 
 #: templates/analysis/overview/_info.html:68
 msgid "Started On"
-msgstr ""
+msgstr "Iniciado em"
 
 #: templates/analysis/overview/_info.html:69
 msgid "Shutdown On"
-msgstr ""
+msgstr "Desligado em"
 
 #: templates/analysis/overview/_screenshots.html:3
 msgid "Screenshots"
-msgstr ""
+msgstr "Capturas de tela"
 
 #: templates/analysis/overview/_screenshots.html:13
 msgid "No screenshots available."
-msgstr ""
+msgstr "Nenhuma captura de tela disponível"
 
 #: templates/analysis/overview/_signatures.html:20
 msgid "Signatures"
-msgstr ""
+msgstr "Assinaturas"
 
 #: templates/analysis/overview/_signatures.html:27
 msgid "1 event"
-msgstr ""
+msgstr "1 evento"
 
 #: templates/analysis/overview/_signatures.html:29
 #: templates/analysis/overview/_signatures.html:33
 #, python-format
 msgid "%(marks)s events"
-msgstr ""
+msgstr "%(marks)s eventos"
 
 #: templates/analysis/overview/_signatures.html:31
 #, python-format
 msgid "%(marks)s out of %(mark)s events"
-msgstr ""
+msgstr "%(marks)s de %(mark)s eventos"
 
 #: templates/analysis/overview/_signatures.html:85
 msgid "No signatures"
-msgstr ""
+msgstr "Nenhum assinatura"
 
 #: templates/analysis/overview/_summary.html:3 templates/analysis/report.html:9
 msgid "Summary"
-msgstr ""
+msgstr "Resumo"
 
 #: templates/analysis/overview/_summary.html:7
 msgid "Registry"
-msgstr ""
+msgstr "Registro"
 
 #: templates/analysis/overview/_summary.html:8
 msgid "Mutexes"
@@ -977,7 +1007,7 @@ msgstr ""
 
 #: templates/analysis/overview/_summary.html:9
 msgid "Directories"
-msgstr ""
+msgstr "Diretórios"
 
 #: templates/analysis/overview/_summary.html:18
 #: templates/analysis/overview/_summary.html:65
@@ -986,15 +1016,15 @@ msgstr ""
 #: templates/analysis/overview/_summary.html:184
 #, python-format
 msgid "Process %(name)s (%(pid)s)"
-msgstr ""
+msgstr "Processo %(name)s (%(pid)s)"
 
 #: templates/analysis/overview/_summary.html:25
 msgid "Opened files"
-msgstr ""
+msgstr "Arquivos abertos"
 
 #: templates/analysis/overview/_summary.html:36
 msgid "Written files"
-msgstr ""
+msgstr "Arquivos escritos"
 
 #: templates/analysis/overview/_summary.html:47
 msgid "Files Read"
@@ -1002,73 +1032,74 @@ msgstr "Arquivos lidos"
 
 #: templates/analysis/overview/_summary.html:72
 msgid "Registry keys opened"
-msgstr ""
+msgstr "Chaves do registro abertas"
 
 #: templates/analysis/overview/_summary.html:83
 msgid "Registry keys written"
-msgstr ""
+msgstr "Chaves escritas no registro"
 
 #: templates/analysis/overview/_summary.html:94
 msgid "Registry keys read"
-msgstr ""
+msgstr "Chaves adicionadas ao registro"
 
 #: templates/analysis/overview/_summary.html:119
 msgid "Mutexes accessed"
-msgstr ""
+msgstr "Mutexes acessados"
 
 #: templates/analysis/overview/_summary.html:144
 msgid "Directories created"
-msgstr ""
+msgstr "Diretórios criados"
 
 #: templates/analysis/overview/_summary.html:155
 msgid "Directories removed"
-msgstr ""
+msgstr "Diretórios removidos"
 
 #: templates/analysis/overview/_summary.html:166
 msgid "Directories enumerated"
-msgstr ""
+msgstr "Diretórios listados"
 
 #: templates/analysis/overview/_summary.html:191
 msgid "Processes created"
-msgstr ""
+msgstr "Processos criados"
 
 #: templates/analysis/overview/_summary.html:202
 msgid "DLLs Loaded"
-msgstr ""
+msgstr "DLLs carregadas"
 
 #: templates/analysis/overview/_url.html:3
 msgid "URL Details"
-msgstr ""
+msgstr "Detalhes do URL"
 
-#: templates/analysis/overview/index.html:14
+#: templates/analysis/overview/index.html:15
 #, python-format
 msgid ""
 "This %(category)s appears fairly benign with a score of <strong>%(score)s "
 "out of 10.</strong>"
 msgstr ""
-"Esta %(category)s parece ser begnigna com uma contagem de <strong>%(score)s "
+"Esta %(category)s parece ser benigna com uma contagem de <strong>%(score)s "
 "de 10.</strong>"
 
-#: templates/analysis/overview/index.html:20
+#: templates/analysis/overview/index.html:21
+#, python-format
 msgid ""
 "<p>This %(category)s shows some signs of potential malicious behavior.</p> "
 "<p>The score of this %(category)s is <strong>%(score)s out of 10.</strong></"
 "p>"
 msgstr ""
-"Esta %(category)s parece ser begnigna com uma contagem de <strong>%(score)s "
+"Esta %(category)s parece ser benigna com uma contagem de <strong>%(score)s "
 "de 10.</strong>"
 
-#: templates/analysis/overview/index.html:27
+#: templates/analysis/overview/index.html:28
 #, python-format
 msgid ""
-"This %(category)s shows numerous signs of malicious behavior. "
-"<br/><br/> The score of this %(category)s is <strong>"
-"%(score)s out of 10.</strong>"
-msgstr "Esta %(category)s mostra numerosos sinais de comportamento "
-"malicioso. <br/><br/> A contagem desta %(category)s é <strong>"
-"%(score)s de 10.</strong>"
+"This %(category)s shows numerous signs of malicious behavior. <br/><br/> The "
+"score of this %(category)s is <strong>%(score)s out of 10.</strong>"
+msgstr ""
+"Esta %(category)s mostra numerosos sinais de comportamento malicioso. <br/"
+"><br/> A contagem desta %(category)s é <strong>%(score)s de 10.</strong>"
 
-#: templates/analysis/overview/index.html:35
+#: templates/analysis/overview/index.html:36
+#, python-format
 msgid ""
 "<p>This %(category)s is <b>very suspicious</b>, with a score of <strong>"
 "%(score)s out of 10!</strong></p>"
@@ -1076,19 +1107,25 @@ msgstr ""
 "<p>Este %(category)s é <b>muito suspeito</b>, com uma pontuação de <strong>"
 "%(score)s de 10!</strong>"
 
-#: templates/analysis/overview/index.html:42
+#: templates/analysis/overview/index.html:43
 msgid ""
 "<b>Please notice</b>: The scoring system is currently still in development "
 "and should be considered an <b><i>alpha</i></b> feature."
 msgstr ""
+"<b>Atenção</b>: O sistema de pontuação ainda está em desenvolvimento e deve "
+"ser considerado em estado <b><i>alfa</i></b>."
 
-#: templates/analysis/overview/index.html:60
+#: templates/analysis/overview/index.html:61
 msgid "Network"
-msgstr ""
+msgstr "Rede"
 
 #: templates/analysis/pending.html:6
 msgid "Pending Tasks"
 msgstr "Tarefas pendentes"
+
+#: templates/analysis/pending.html:14 templates/compare/_summary_table.html:6
+msgid "Target"
+msgstr "Alvo"
 
 #: templates/analysis/pending.html:48
 msgid "No pending tasks."
@@ -1099,6 +1136,8 @@ msgstr "Nenhum tarefa pendente"
 msgid ""
 "Process memory dump for PID <b>%(panalysis)s</b> (PID %(pid)s, dump %(num)s)"
 msgstr ""
+"Despejo de memória do processo de PID <b>%(panalysis)s</b> (PID %(pid)s, "
+"despejo %(num)s)"
 
 #: templates/analysis/procmemory/index.html:16
 msgid "Extracted/injected images (may contain unpacked executables)"
@@ -1114,7 +1153,7 @@ msgstr ""
 
 #: templates/analysis/procmemory/index.html:39
 msgid "URLs found in process memory"
-msgstr ""
+msgstr "URLs encontradas ao processar a memória"
 
 #: templates/analysis/report.html:13 templates/analysis/static/index.html:4
 msgid "Static Analysis"
@@ -1125,7 +1164,6 @@ msgid "Behavioral Analysis"
 msgstr "Análise comportamental"
 
 #: templates/analysis/report.html:25 templates/analysis/report.html.py:30
-
 msgid "Network Analysis"
 msgstr "Análise de rede"
 
@@ -1150,22 +1188,28 @@ msgid ""
 "For details on how to perform searches, get some <a href=\"#help\" data-"
 "toggle=\"collapse\">help</a>"
 msgstr ""
+"Para detalhes de como executar buscas, vá para a <a href=\"#help\" data-"
+"toggle=\"collapse\">ajuda</a>"
 
-#: templates/analysis/search_results.html:7
+#: templates/analysis/search_results.html:3
+msgid "Term"
+msgstr "Termo"
+
+#: templates/analysis/search_results.html:8
 msgid "Search Results"
 msgstr "Resultado da busca"
 
-#: templates/analysis/search_results.html:13
+#: templates/analysis/search_results.html:14
 msgid "Matches"
-msgstr ""
+msgstr "Correspondências"
 
-#: templates/analysis/search_results.html:29
+#: templates/analysis/search_results.html:30
 msgid "more matches"
-msgstr ""
+msgstr "mais correspondências"
 
-#: templates/analysis/search_results.html:37
+#: templates/analysis/search_results.html:38
 msgid "No results found."
-msgstr ""
+msgstr "Nenhum resultado encontrado"
 
 #: templates/analysis/static/_antivirus.html:6
 #: templates/analysis/static/index.html:6
@@ -1174,11 +1218,11 @@ msgstr ""
 
 #: templates/analysis/static/_antivirus.html:10
 msgid "Result"
-msgstr ""
+msgstr "Resultado"
 
 #: templates/analysis/static/_antivirus.html:19
 msgid "Clean"
-msgstr ""
+msgstr "Limpo"
 
 #: templates/analysis/static/_antivirus.html:38
 msgid "Your file is being analysed"
@@ -1206,7 +1250,7 @@ msgstr ""
 
 #: templates/analysis/static/_pe32.html:43
 msgid "Serial Number"
-msgstr ""
+msgstr "Número de série"
 
 #: templates/analysis/static/_pe32.html:47
 msgid "Common Name"
@@ -1214,15 +1258,15 @@ msgstr ""
 
 #: templates/analysis/static/_pe32.html:51
 msgid "Country"
-msgstr ""
+msgstr "País"
 
 #: templates/analysis/static/_pe32.html:55
 msgid "Locality"
-msgstr ""
+msgstr "Localidade"
 
 #: templates/analysis/static/_pe32.html:66
 msgid "Version Infos"
-msgstr ""
+msgstr "Informações da versão"
 
 #: templates/analysis/static/_pe32.html:86
 msgid "PEiD Signatures"
@@ -1234,27 +1278,27 @@ msgstr "Seções"
 
 #: templates/analysis/static/_pe32.html:104
 msgid "Virtual Address"
-msgstr ""
+msgstr "Endereço virtual"
 
 #: templates/analysis/static/_pe32.html:105
 msgid "Virtual Size"
-msgstr ""
+msgstr "Tamanho virtual"
 
 #: templates/analysis/static/_pe32.html:106
 msgid "Size of Raw Data"
-msgstr ""
+msgstr "Tamanho dos dados"
 
 #: templates/analysis/static/_pe32.html:107
 msgid "Entropy"
-msgstr ""
+msgstr "Entropia"
 
 #: templates/analysis/static/_pe32.html:133
 msgid "Language"
-msgstr ""
+msgstr "Língua"
 
 #: templates/analysis/static/_pe32.html:134
 msgid "Sub-language"
-msgstr ""
+msgstr "Sub-língua"
 
 #: templates/analysis/static/_pe32.html:135
 msgid "File type"
@@ -1266,7 +1310,7 @@ msgstr "Importados"
 
 #: templates/analysis/static/_pe32.html:159
 msgid "Library"
-msgstr ""
+msgstr "Biblioteca"
 
 #: templates/analysis/static/_pe32.html:172
 msgid "Exports"
@@ -1278,7 +1322,7 @@ msgstr ""
 
 #: templates/analysis/static/_pe32.html:192
 msgid "Nothing to display."
-msgstr ""
+msgstr "Nada para exibir"
 
 #: templates/analysis/static/index.html:5
 msgid "Strings"
@@ -1286,15 +1330,11 @@ msgstr ""
 
 #: templates/analysis/static/index.html:13
 msgid "No static analysis available."
-msgstr ""
+msgstr "Nenhuma análise estática disponível"
 
 #: templates/compare/_info.html:14 templates/compare/_summary_table.html:8
 msgid "Completed On"
 msgstr "Completado em"
-
-#: templates/compare/_summary_table.html:6
-msgid "Target"
-msgstr ""
 
 #: templates/compare/_summary_table.html:10
 #: templates/compare/_summary_table.html:25 templates/submission/index.html:80
@@ -1308,46 +1348,67 @@ msgstr "Análise 1"
 
 #: templates/compare/both.html:19
 msgid "Execution Graph"
-msgstr ""
+msgstr "Gráfico de execução"
 
-#: templates/compare/both.html:27
+#: templates/compare/both.html:21
+msgid ""
+"<p>This graph gives you an abstracted overview of the execution of the "
+"analyzer file. More specifically it represents the percentage of occurrences "
+"of behavioral events classified by category: the bigger the colored block, "
+"the higher is the count of events for the respective category performed by "
+"the analyzed malware.</p><p>Comparing two graphs from different analyses can "
+"give you help estimate how much the behavior of the two files differ.</"
+"p><p>Following are the colored categories:</p>"
+msgstr ""
+"<p>Este gráfico dá uma visão geral sobre a execução do analizador. Mais "
+"especificamente ele representa a porcentagem de ocorrências de eventos "
+"comportamentais classificados por categoria: quanto maior o bloco colorido, "
+"maior o número de eventos da respectiva categoria executados pelo malware "
+"analisado.</p><p>Comparar dois gráficos de diferentes análises pode ajudá-lo "
+"a estimar quanto difere o comportamento de dois arquivos.</p><p>Na sequência "
+"estão as categorias coloridas:</p>"
+
+#: templates/compare/both.html:25
 msgid "file"
 msgstr "arquivo"
 
-#: templates/compare/both.html:28
+#: templates/compare/both.html:26
 msgid "system"
-msgstr ""
+msgstr "sistema"
 
-#: templates/compare/both.html:33
+#: templates/compare/both.html:31
 msgid "windows"
 msgstr ""
 
-#: templates/compare/both.html:46 templates/compare/hash.html:13
+#: templates/compare/both.html:44 templates/compare/hash.html:13
 #: templates/compare/left.html:25
 msgid "Analysis 2"
 msgstr "Análise 2"
 
 #: templates/compare/hash.html:15 templates/compare/left.html:27
 msgid "You need to select the second analysis."
-msgstr ""
+msgstr "Você precisa selecionar a segunda análise."
 
 #: templates/compare/hash.html:17
 msgid "Following are all the analyses of the file with provided MD5 or pattern"
 msgstr ""
+"Na sequência estão todas as análises do arquivo com o MD5 ou padrão dado"
 
 #: templates/compare/hash.html:20
 msgid ""
 "There is no analysis for the specified file or you selected the same "
 "selected analysis."
 msgstr ""
+"Não há uma análise para o arquivo especificado ou foi selecionada a mesma "
+"análise."
 
 #: templates/compare/left.html:29
 msgid "Following are all the other analyses of the same file or URL:"
-msgstr ""
+msgstr "Na sequência estão todas as outras análises do mesmo arquivo ou URL:"
 
 #: templates/compare/left.html:32
 msgid "There is no other analysis for the same file or URL."
-msgstr ""
+msgstr "Não há outras análises para o mesmo arquivo ou URL."
 
 #: templates/compare/left.html:35
 msgid ""
@@ -1375,8 +1436,6 @@ msgid "Total samples"
 msgstr "Número de amostras"
 
 #: templates/dashboard/index.html:27
-#, fuzzy
-#| msgid "Status"
 msgid "States"
 msgstr "Estados"
 
@@ -1394,7 +1453,7 @@ msgstr "Voltar para o topo"
 
 #: templates/header.html:22
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Alternar navegação"
 
 #: templates/header.html:31
 msgid "Dashboard"
@@ -1414,19 +1473,19 @@ msgstr "Enviar"
 
 #: templates/submission/complete.html:4
 msgid "Submission complete!"
-msgstr ""
+msgstr "Envio completo!"
 
 #: templates/submission/complete.html:5
 msgid "The following tasks were added successfully:"
-msgstr ""
+msgstr "As seguintes tarefas foram adicionadas com sucesso"
 
 #: templates/submission/complete.html:10
 msgid "Click on the links to monitor the status of the submission:"
-msgstr ""
+msgstr "Clique nas ligações para monitorar o estado do envio:"
 
 #: templates/submission/index.html:66
 msgid "Chosen file to resubmit"
-msgstr ""
+msgstr "Arquivo escolhido para reenviar"
 
 #: templates/submission/index.html:88
 msgid "Chosen URL to resubmit"
@@ -1434,7 +1493,7 @@ msgstr "Escolher URL para reenviar"
 
 #: templates/submission/index.html:101
 msgid "Network routing through <i>dirty line</i> or VPN"
-msgstr ""
+msgstr "Roteamento de rede através de <i>linha suja</i> ou VPN"
 
 #: templates/submission/index.html:105
 msgid "None (no internet access)"
@@ -1478,7 +1537,7 @@ msgstr "Alta"
 
 #: templates/submission/index.html:157
 msgid "Custom"
-msgstr ""
+msgstr "Personalização"
 
 #: templates/submission/index.html:162
 msgid "No Injection"
@@ -1524,28 +1583,1924 @@ msgstr "habilite ambiente simulado especificado na configuração auxiliar"
 msgid "Analyze"
 msgstr "Análise"
 
-#: templates/submission/status.html:6
+#: templates/submission/status.html:7
 msgid "Hang on..."
 msgstr "Aguarde..."
 
-#: templates/submission/status.html:8
+#: templates/submission/status.html:9
 #, python-format
 msgid ""
-"The analysis is not completed yet, it's still <b>%(status)s</b>. This page "
+"The analysis is not completed yet, it's still <b>%(s_status)s</b>. This page "
 "will refresh every 5 seconds."
 msgstr ""
-"A análise ainda não está completa, ainda está <b>%(status)s</b>. Esta página "
+"A análise ainda não está completa, está <b>%(s_status)s</b>. Esta página "
 "será recarregada a cada 5 segundos."
 
 #: templates/success.html:5
 msgid "Great!"
 msgstr "Muito bom!"
 
-
-#: templates/analysis/overview/_info.html:49
+#: web/translation_strings.py:4
 msgid ""
-"Analysis failed: The package \"modules.packages.doc\" start function raised an "
-"error: Unable to find any Microsoft Office Word executable."
+"Analysis failed: The package \"modules.packages.doc\" start function raised "
+"an error: Unable to find any Microsoft Office Word executable."
 msgstr ""
 "Análise falhou: A função de inicialização do pacote \"modules.packages.doc\" "
-"gerou um erro: Não foi possível encontrar o executável do Microsoft Office Word"
+"gerou um erro: Não foi possível encontrar o executável do Microsoft Office "
+"Word"
+
+#: web/translation_strings.py:6
+msgid ""
+"Connects to an IP address that is no longer responding to requests "
+"(legitimate services will remain up-and-running usually)"
+msgstr ""
+"Conecta-se a um endereço IP que não responde mais a requisições (serviços "
+"legítimos geralmente continuam funcionando)"
+
+#: web/translation_strings.py:8
+msgid "Performs some HTTP requests"
+msgstr "Executa algumas requisições HTTP"
+
+#: web/translation_strings.py:9
+msgid ""
+"Collects information to fingerprint the system (MachineGuid, "
+"DigitalProductId, SystemBiosDate)"
+msgstr ""
+
+#: web/translation_strings.py:10
+msgid ""
+"One or more potentially interesting buffers were extracted, these generally "
+"contain injected code, configuration data, etc."
+msgstr ""
+
+#: web/translation_strings.py:12 web/translation_strings.py:38
+msgid "Allocates read-write-execute memory (usually to unpack itself)"
+msgstr ""
+"Aloca memória para leitura-escrita-execução (geralmente para se descompactar)"
+
+#: web/translation_strings.py:13 web/translation_strings.py:131
+msgid "Creates executable files on the filesystem"
+msgstr "Cria arquivos executáveis no sistema de arquivos"
+
+#: web/translation_strings.py:14 web/translation_strings.py:324
+msgid "Creates a suspicious process"
+msgstr "Cria um processo suspeito"
+
+#: web/translation_strings.py:15
+msgid ""
+"Connects to IP addresses that are no longer responding to requests "
+"(legitimate services will remain up-and-running  usually)"
+msgstr ""
+"Conecta-se endereços IP que não respondem mais a requisições (serviços "
+"legítimos geralmente continuam funcionando)"
+
+#: web/translation_strings.py:17
+msgid ""
+"File has been identified by at least one AntiVirus engine on VirusTotal as "
+"malicious"
+msgstr ""
+"O arquivo foi identificado por pelo menos uma ferramenta de AntiVirus no "
+"VirusTotal como malicioso"
+
+#: web/translation_strings.py:18
+msgid "One or more of the buffers contains an embedded PE file"
+msgstr ""
+
+#: web/translation_strings.py:19 web/translation_strings.py:42
+msgid "Attempts to identify installed AV products by registry key"
+msgstr "Tentativa de identificar AntiVirus instalados pelas chaves no registro"
+
+#: web/translation_strings.py:20 web/translation_strings.py:226
+msgid "Creates known Dexter registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:21 web/translation_strings.py:231
+msgid "One or more processes crashed"
+msgstr "Um ou mais processos com erro"
+
+#: web/translation_strings.py:22
+msgid "failed_reporting"
+msgstr "falha no relatório"
+
+#: web/translation_strings.py:24
+msgid "failed_analysis"
+msgstr "falha na análise"
+
+#: web/translation_strings.py:27
+msgid "failed_processing"
+msgstr "falha no processamento"
+
+#: web/translation_strings.py:29
+msgid "recovered"
+msgstr "recuperado"
+
+#: web/translation_strings.py:30 web/translation_strings.py:171
+msgid "Harvests credentials from local FTP client softwares"
+msgstr ""
+
+#: web/translation_strings.py:31 web/translation_strings.py:137
+msgid "Putty Files, Registry Keys and/or Mutexes Detected"
+msgstr ""
+
+#: web/translation_strings.py:32 web/translation_strings.py:163
+msgid "This executable is signed"
+msgstr ""
+
+#: web/translation_strings.py:33 web/translation_strings.py:164
+msgid "This executable has a PDB path"
+msgstr ""
+
+#: web/translation_strings.py:34 web/translation_strings.py:219
+msgid "The executable has PE anomalies (could be a false positive)"
+msgstr ""
+
+#: web/translation_strings.py:35 web/translation_strings.py:94
+msgid "Contains known-bad certificates"
+msgstr ""
+
+#: web/translation_strings.py:36 web/translation_strings.py:165
+msgid "Executes one or more WMI queries"
+msgstr ""
+
+#: web/translation_strings.py:37 web/translation_strings.py:185
+#, fuzzy
+#| msgid "URLs found in process memory"
+msgid "Potentially malicious URLs were found in the process memory dump"
+msgstr "URLs encontradas ao processar a memória"
+
+#: web/translation_strings.py:39
+msgid "Detects Avast Antivirus through the presence of a library"
+msgstr ""
+
+#: web/translation_strings.py:40
+msgid "Detects Bitdefender Antivirus through the presence of a library"
+msgstr "Detecta o Antivirus Bitdefender pela presença de uma biblioteca"
+
+#: web/translation_strings.py:41
+msgid "Attempts to identify installed AV products by installation directory"
+msgstr "Tentativa de identificar AntiVirus instalados pelo diretório de instalação"
+
+#: web/translation_strings.py:43
+msgid "Modifies Software Restriction Policies likely to cripple AV"
+msgstr ""
+
+#: web/translation_strings.py:44
+msgid ""
+"Checks for the presence of known devices from debuggers and forensic tools"
+msgstr ""
+"Procura por dispositivos conhecidos de depuradores e ferramentas forenses"
+
+#: web/translation_strings.py:45
+msgid ""
+"Checks for the presence of known windows from debuggers and forensic tools"
+msgstr ""
+"Procura por janelas conhecidas de depuradores e ferramentas forenses"
+
+#: web/translation_strings.py:46
+msgid "Detects the presence of Wine emulator"
+msgstr "Detecta a presença do emulador Wine"
+
+#: web/translation_strings.py:47
+msgid "Looks for known filepaths where sandboxes execute samples"
+msgstr "Procura for caminhos de arquivos conhecidos onde \"sandboxes\" executam amostras"
+
+#: web/translation_strings.py:48
+msgid ""
+"Checks whether any human activity is being performed by constantly checking "
+"whether the foreground window changed"
+msgstr ""
+"Verifica se está acontecendo alguma atividade humana checando constantemente "
+"se a janela em primeiro plano muda"
+
+#: web/translation_strings.py:50
+msgid "Looks for the Windows Idle Time to determine the uptime"
+msgstr ""
+
+#: web/translation_strings.py:51
+msgid "Detects Joe or Anubis Sandboxes through the presence of a file"
+msgstr ""
+
+#: web/translation_strings.py:52
+msgid "Installs an hook procedure to monitor for mouse events"
+msgstr ""
+
+#: web/translation_strings.py:53
+msgid "A process attempted to delay the analysis task."
+msgstr "Um processo tentou adiar a tarefa de análise"
+
+#: web/translation_strings.py:54
+msgid "Tries to detect SunBelt Sandbox"
+msgstr ""
+
+#: web/translation_strings.py:55
+msgid "Tries to unhook Windows functions monitored by Cuckoo"
+msgstr ""
+
+#: web/translation_strings.py:56
+msgid "Checks for known Chinese AV sofware registry keys"
+msgstr "Procura por chaves de registro conhecidas de softwares Antivirus chineses"
+
+#: web/translation_strings.py:57
+msgid ""
+"File has been identified by at least 40 AntiVirus engines on VirusTotal as "
+"malicious"
+msgstr ""
+"O arquivo foi identificado por pelo menos 40 ferramenta de AntiVirus no "
+"VirusTotal como malicioso"
+
+#: web/translation_strings.py:58
+msgid ""
+"File has been identified by at least 30 AntiVirus engines on VirusTotal as "
+"malicious"
+msgstr ""
+"O arquivo foi identificado por pelo menos 30 ferramenta de AntiVirus no "
+"VirusTotal como malicioso"
+
+#: web/translation_strings.py:59
+msgid ""
+"File has been identified by at least 20 AntiVirus engines on VirusTotal as "
+"malicious"
+msgstr ""
+"O arquivo foi identificado por pelo menos 20 ferramenta de AntiVirus no "
+"VirusTotal como malicioso"
+
+#: web/translation_strings.py:60
+msgid ""
+"File has been identified by at least 10 AntiVirus engines on VirusTotal as "
+"malicious"
+msgstr ""
+"O arquivo foi identificado por pelo menos 10 ferramenta de AntiVirus no "
+"VirusTotal como malicioso"
+
+#: web/translation_strings.py:61
+msgid "Checks the version of Bios, possibly for anti-virtualization"
+msgstr "Verifica a versão da Bios, possivelmente para evitar virtualização"
+
+#: web/translation_strings.py:62
+msgid "Queries information on disks, possibly for anti-virtualization"
+msgstr "Investiga infromações nos discos, possivelmente para evitar virtualização"
+
+#: web/translation_strings.py:63
+msgid "Detects Virtual Machines through their custom firmware"
+msgstr ""
+
+#: web/translation_strings.py:64
+msgid ""
+"Checks the presence of IDE drives in the registry, possibly for anti-"
+"virtualization"
+msgstr ""
+
+#: web/translation_strings.py:65
+msgid "Detects virtualization software with SCSI Disk Identifier trick(s)"
+msgstr "Detecta software de virtaulização com truque(s) de Identificador de discos SCSI"
+
+#: web/translation_strings.py:66
+msgid "Enumerates services, possibly for anti-virtualization"
+msgstr "Enumera serviçoes, possivelmente para evitar virutalização"
+
+#: web/translation_strings.py:67
+msgid "Tries to detect Sandboxie"
+msgstr ""
+
+#: web/translation_strings.py:68
+msgid "Detects VirtualBox using ACPI tricks"
+msgstr "Detecta VirtualBox usando truques de ACPI"
+
+#: web/translation_strings.py:69
+msgid "Detects VirtualBox through the presence of a device"
+msgstr "Detecta VirtualBox através da presença de um dispositivo"
+
+#: web/translation_strings.py:70
+msgid "Detects VirtualBox through the presence of a file"
+msgstr "Detecta VirtualBox através da presença de um arquivo"
+
+#: web/translation_strings.py:71
+msgid "Detects VirtualBox through the presence of a registry key"
+msgstr "Detecta VirtualBox através da presença de uma chave de registro"
+
+#: web/translation_strings.py:72
+msgid "Detects VirtualBox through the presence of a window"
+msgstr "Detecta VirtualBox através da presença de uma janela"
+
+#: web/translation_strings.py:73
+msgid "Detects VirtualPC through a magic instruction"
+msgstr ""
+
+#: web/translation_strings.py:74
+msgid "Tries to detect VirtualPC"
+msgstr "Tenta detectar VirtualPC"
+
+#: web/translation_strings.py:75
+msgid "Detects VMWare through the presence of various files"
+msgstr "Detecta VMWare através da presença de diversos arquivos"
+
+#: web/translation_strings.py:76
+msgid "Detects VMWare through the in instruction feature"
+msgstr ""
+
+#: web/translation_strings.py:77
+msgid "Detects VMWare through the presence of a registry key"
+msgstr ""
+
+#: web/translation_strings.py:78
+msgid "Installs itself in AppInit to inject into new processes"
+msgstr ""
+
+#: web/translation_strings.py:79
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Carbunak/Anunak APT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:80
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known CloudAtlas APT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:81
+msgid "Shows some indicators associated with the Flame malware"
+msgstr ""
+
+#: web/translation_strings.py:82
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Inception APT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:83
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Putter Panda APT mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:84
+msgid "Connects to Known Sandworm APT IP address"
+msgstr ""
+
+#: web/translation_strings.py:85
+msgid "Uses Known Sandworm APT URL Indicator"
+msgstr ""
+
+#: web/translation_strings.py:86
+msgid "Appears to be the targeted Turla Carbon malware"
+msgstr ""
+
+#: web/translation_strings.py:87
+msgid "Creates known Turla/Uroburos APT files"
+msgstr ""
+
+#: web/translation_strings.py:88
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Turla/Uroburos APT mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:89
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known LolBot Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:90
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known SDBot Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:91
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known TDSS Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:92
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Vanbot Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:93
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid ""
+"Creates known Schwarzesonne Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:95
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Bancos Banking Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:96
+msgid "Cridex banking trojan"
+msgstr ""
+
+#: web/translation_strings.py:97
+msgid "Detected Prinimalka banking trojan"
+msgstr ""
+
+#: web/translation_strings.py:98
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known SpyEye mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:99
+msgid "Contacts C&C server HTTP check-in (SpyEye Banking Trojan)"
+msgstr ""
+
+#: web/translation_strings.py:100
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Tinba Banking Trojan mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:101
+msgid "Creates Zeus (Banking Trojan) mutexes"
+msgstr ""
+
+#: web/translation_strings.py:102
+msgid "Zeus P2P (Banking Trojan)"
+msgstr ""
+
+#: web/translation_strings.py:103
+msgid "Contacts C&C server HTTP check-in (Banking Trojan)"
+msgstr ""
+
+#: web/translation_strings.py:104
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Online Banking mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:105
+msgid "Installs OpenCL library, probably to mine Bitcoins"
+msgstr ""
+
+#: web/translation_strings.py:106
+msgid "Recognized to be an Athena HTTP bot"
+msgstr ""
+
+#: web/translation_strings.py:107
+msgid "Contacts C&C server HTTP check-in (Athena Bot)"
+msgstr ""
+
+#: web/translation_strings.py:108
+msgid "Contacts C&C server HTTP check-in (Beta Bot)"
+msgstr ""
+
+#: web/translation_strings.py:109
+msgid "Recognized to be a DirtJumper bot"
+msgstr ""
+
+#: web/translation_strings.py:110
+msgid "Recognized to be a Drive2 bot"
+msgstr ""
+
+#: web/translation_strings.py:111
+msgid "Recognized to be a Drive bot"
+msgstr ""
+
+#: web/translation_strings.py:112
+#, fuzzy
+#| msgid "Performs some HTTP requests"
+msgid "Performs HTTP requests like Kelihos"
+msgstr "Executa algumas requisições HTTP"
+
+#: web/translation_strings.py:113
+#, fuzzy
+#| msgid "Performs some HTTP requests"
+msgid "Performs HTTP requests like Kovter"
+msgstr "Executa algumas requisições HTTP"
+
+#: web/translation_strings.py:114
+msgid "Recognized to be an Madness bot"
+msgstr ""
+
+#: web/translation_strings.py:115
+msgid "Contacts C&C server HTTP check-in (Pony Bot)"
+msgstr ""
+
+#: web/translation_strings.py:116
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Ruskill mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:117
+msgid "Contacts C&C server HTTP check-in (Solar Bot)"
+msgstr ""
+
+#: web/translation_strings.py:118
+msgid "Contacts C&C server HTTP check-in (VNLoader HTTP Bot)"
+msgstr ""
+
+#: web/translation_strings.py:119
+msgid "Contacts C&C server HTTP check-in (WarBot)"
+msgstr ""
+
+#: web/translation_strings.py:120
+msgid ""
+"Installs a Browser Helper Object to thwart the users browsing experience"
+msgstr ""
+
+#: web/translation_strings.py:121
+msgid "Operates on local firewall's policies and settings"
+msgstr ""
+
+#: web/translation_strings.py:122
+msgid "Attempts to create a known Carberp/Rovnix mutex."
+msgstr ""
+
+#: web/translation_strings.py:123
+msgid "Looks up the Dropbox cloud service"
+msgstr ""
+
+#: web/translation_strings.py:124
+msgid "Checks for Cloudflare connection"
+msgstr ""
+
+#: web/translation_strings.py:125
+msgid "Looks up documents from one of Google's services"
+msgstr ""
+
+#: web/translation_strings.py:126
+msgid "Connects to MediaFire Cloud Storage Service"
+msgstr ""
+
+#: web/translation_strings.py:127
+msgid "Looks up the MegaUpload cloud service"
+msgstr ""
+
+#: web/translation_strings.py:128
+msgid "Looks up the RapidShare cloud service"
+msgstr ""
+
+#: web/translation_strings.py:129
+msgid "Connects to Wetransfer Cloud Storage Service"
+msgstr ""
+
+#: web/translation_strings.py:130
+#, fuzzy
+#| msgid "Creates executable files on the filesystem"
+msgid "Creates (office) documents on the filesystem"
+msgstr "Cria arquivos executáveis no sistema de arquivos"
+
+#: web/translation_strings.py:132
+#, fuzzy
+#| msgid "Create Time"
+msgid "Creates a service"
+msgstr "Horário de criação"
+
+#: web/translation_strings.py:133 web/translation_strings.py:136
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known IPKiller DDoS Bot mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:134
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Dark-DDoS Bot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:135
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Eclipse DDoS Bot mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:138
+msgid "WinSCP Files, Registry Keys and/or Mutexes Detected"
+msgstr ""
+
+#: web/translation_strings.py:139
+msgid ""
+"Modifies system policies to prevent the launching of specific applications "
+"or executables"
+msgstr ""
+
+#: web/translation_strings.py:140
+msgid "Attempts to disable browser security warnings"
+msgstr ""
+
+#: web/translation_strings.py:141
+msgid "Disables Windows Security features"
+msgstr ""
+
+#: web/translation_strings.py:142
+msgid ""
+"Attempts to disable SPDY support in Firefox to improve web infostealing "
+"capability"
+msgstr ""
+
+#: web/translation_strings.py:143
+msgid "Attempts to disable System Restore"
+msgstr ""
+
+#: web/translation_strings.py:144
+msgid "Attempts to disable Windows Error Reporting"
+msgstr ""
+
+#: web/translation_strings.py:145
+msgid "Attempts to disable Windows Auto Updates"
+msgstr ""
+
+#: web/translation_strings.py:146
+msgid "Connects to DNS Servers of Dynamic DNS Provider"
+msgstr ""
+
+#: web/translation_strings.py:147
+msgid "Connects to expired 3322.org or related domain (125.77.199.30)"
+msgstr ""
+
+#: web/translation_strings.py:148
+msgid "Resolves Free Hosting Domain, Possibly Malicious"
+msgstr ""
+
+#: web/translation_strings.py:149
+msgid "Resolves .BY Belarus TLD, Possibly Malicious"
+msgstr ""
+
+#: web/translation_strings.py:150
+msgid "Resolves .CC Belarus TLD, Possibly Malicious"
+msgstr ""
+
+#: web/translation_strings.py:151
+msgid "Resolves TOR Hidden Service Union TLD (.onion)"
+msgstr ""
+
+#: web/translation_strings.py:152
+msgid "Resolves .PW TLD, Possibly Malicious"
+msgstr ""
+
+#: web/translation_strings.py:153
+msgid "Resolves .RU Russia TLD, Possibly Malicious"
+msgstr ""
+
+#: web/translation_strings.py:154
+msgid "Resolves .SU Soviet Union TLD, Possibly Malicious"
+msgstr ""
+
+#: web/translation_strings.py:155
+msgid "Suspicious downloader (Cabby)"
+msgstr ""
+
+#: web/translation_strings.py:156
+msgid "Loads a driver"
+msgstr ""
+
+#: web/translation_strings.py:157
+msgid "At least one process apparently crashed during execution"
+msgstr ""
+
+#: web/translation_strings.py:158
+msgid "Contacts C&C server HTTP check-in (Blackhole Exploit Kit)"
+msgstr ""
+
+#: web/translation_strings.py:159
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates Known Exploit Kit mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:160
+msgid "Creates potential Sweet Orange EK mutexes"
+msgstr ""
+
+#: web/translation_strings.py:161
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known FakeRean Fraudtool files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:162
+msgid "Creates known PWDump/FGDump files"
+msgstr ""
+
+#: web/translation_strings.py:166
+msgid "Connects to BitTorrent Bleepchat IP"
+msgstr ""
+
+#: web/translation_strings.py:167
+msgid "Connects to Chinese QQ Instant Messenger Service IP"
+msgstr ""
+
+#: web/translation_strings.py:168
+msgid "Attempts to access Bitcoin/ALTCoin wallets"
+msgstr ""
+
+#: web/translation_strings.py:169
+msgid "Steals private information from local Internet browsers"
+msgstr ""
+
+#: web/translation_strings.py:170
+msgid "Creates known Derusbi Infostealer files"
+msgstr ""
+
+#: web/translation_strings.py:172
+msgid "Harvests information related to installed instant messenger clients"
+msgstr ""
+
+#: web/translation_strings.py:173
+msgid "Creates a windows hook that monitors keyboard input (keylogger)"
+msgstr ""
+
+#: web/translation_strings.py:174
+msgid "Harvests credentials from local email clients"
+msgstr ""
+
+#: web/translation_strings.py:175
+msgid "Executed a process and injected code into it, probably while unpacking"
+msgstr ""
+
+#: web/translation_strings.py:176
+msgid ""
+"Code injection with CreateRemoteThread or NtQueueApcThread in a remote "
+"process"
+msgstr ""
+
+#: web/translation_strings.py:177
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Ardamax Keylogger mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:178
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Jintor Keylogger mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:179
+msgid "Tries to locate where the browsers are installed"
+msgstr ""
+
+#: web/translation_strings.py:180
+msgid "Tries to locate whether any sniffers are installed"
+msgstr ""
+
+#: web/translation_strings.py:181
+msgid "Disables Windows' cmd.exe"
+msgstr ""
+
+#: web/translation_strings.py:182
+msgid "Disables Windows' Registry Editor"
+msgstr ""
+
+#: web/translation_strings.py:183
+msgid "Disables Windows' Task Manager"
+msgstr ""
+
+#: web/translation_strings.py:184
+msgid "Internet Explorer creates one or more martian processes"
+msgstr ""
+
+#: web/translation_strings.py:186
+msgid "Connects to Mining Pool to Generate Virtual Currency"
+msgstr ""
+
+#: web/translation_strings.py:187
+msgid ""
+"This sample modifies more than 5 files through suspicious ways, likely a "
+"polymorphic virus or a ransomware"
+msgstr ""
+
+#: web/translation_strings.py:189
+msgid ""
+"This sample modifies more than 50 files through suspicious ways, likely a "
+"polymorphic virus or a ransomware"
+msgstr ""
+
+#: web/translation_strings.py:191
+msgid ""
+"This sample modifies more than 100 files through suspicious ways, likely a "
+"polymorphic virus or a ransomware"
+msgstr ""
+
+#: web/translation_strings.py:193
+msgid ""
+"This sample modifies more than 500 files through suspicious ways, likely a "
+"polymorphic virus or a ransomware"
+msgstr ""
+
+#: web/translation_strings.py:195
+msgid "Attempts to modify desktop wallpaper"
+msgstr ""
+
+#: web/translation_strings.py:196
+msgid ""
+"Modifies the ZoneTransfer.ZoneID in Zone.Identifier ADS, generally to "
+"disable security warnings"
+msgstr ""
+
+#: web/translation_strings.py:198
+msgid "Creates Remote Desktop Protocol (RDP) Mutexes"
+msgstr ""
+
+#: web/translation_strings.py:199
+msgid "Checks presence of mIRC Chat Client"
+msgstr ""
+
+#: web/translation_strings.py:200
+msgid "Installs Tor on the infected machine"
+msgstr ""
+
+#: web/translation_strings.py:201
+msgid "Creates a Tor Hidden Service on the machine"
+msgstr ""
+
+#: web/translation_strings.py:202
+msgid "Connects to Chinese URL Shortener, Possibly Malicious"
+msgstr ""
+
+#: web/translation_strings.py:203
+msgid "Creates VNC Remote Administration Tool Mutexes"
+msgstr ""
+
+#: web/translation_strings.py:204
+msgid "Microsoft Office process executed an embedded Packager Shell Object"
+msgstr ""
+
+#: web/translation_strings.py:205
+#, fuzzy
+#| msgid "Creates a suspicious process"
+msgid "Creates suspicious VBA object"
+msgstr "Cria um processo suspeito"
+
+#: web/translation_strings.py:206
+msgid "Office document performs HTTP request (possibly to download malware)"
+msgstr ""
+
+#: web/translation_strings.py:207
+msgid "An office file wrote an executable file to disk"
+msgstr ""
+
+#: web/translation_strings.py:208
+msgid "Unconventional binary language"
+msgstr ""
+
+#: web/translation_strings.py:209
+msgid "A foreign language has been detected"
+msgstr ""
+
+#: web/translation_strings.py:210
+msgid "The binary likely contains encrypted or compressed data."
+msgstr ""
+
+#: web/translation_strings.py:211
+msgid "A section with a high entropy has been found"
+msgstr ""
+
+#: web/translation_strings.py:212
+msgid "Overall entropy of this PE file is high"
+msgstr ""
+
+#: web/translation_strings.py:213
+msgid "Creates a slightly modified copy of itself"
+msgstr ""
+
+#: web/translation_strings.py:214
+msgid "Possibly a polymorphic version of itself"
+msgstr ""
+
+#: web/translation_strings.py:215
+msgid "The executable is compressed using UPX"
+msgstr ""
+
+#: web/translation_strings.py:216
+msgid "Section name indicates UPX"
+msgstr ""
+
+#: web/translation_strings.py:217
+msgid "The executable is likely packed with VMProtect"
+msgstr ""
+
+#: web/translation_strings.py:218
+msgid "Section name indicates VMProtect"
+msgstr ""
+
+#: web/translation_strings.py:220
+msgid "Creates an Alternate Data Stream (ADS)"
+msgstr ""
+
+#: web/translation_strings.py:221
+msgid "Installs itself for autorun at Windows startup"
+msgstr ""
+
+#: web/translation_strings.py:222
+msgid "Created Known Alina POS Malware Files"
+msgstr ""
+
+#: web/translation_strings.py:223
+msgid "Contacts C&C server HTTP check-in (Alina Point of Sale Malware)"
+msgstr ""
+
+#: web/translation_strings.py:224
+msgid "Contacts Botnet HTTP check-in (BlackPOS)"
+msgstr ""
+
+#: web/translation_strings.py:225
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Decebal POS Malware mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:227
+msgid "Creates known JackPOS files"
+msgstr ""
+
+#: web/translation_strings.py:228
+msgid "Contacts Botnet HTTP check-in (JackPOS)"
+msgstr ""
+
+#: web/translation_strings.py:229
+msgid ""
+"Contacts C&C server HTTP check-in (Poscardstealer Point of Sale Malware)"
+msgstr ""
+
+#: web/translation_strings.py:230
+#, fuzzy
+#| msgid "Creates a suspicious process"
+msgid "Creates a suspicious Powershell process"
+msgstr "Cria um processo suspeito"
+
+#: web/translation_strings.py:232
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Chanitor Ransomware mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:233
+msgid "Runs bcdedit commands specific to ransomware"
+msgstr ""
+
+#: web/translation_strings.py:234
+msgid "Creates known ransomware decryption instruction / key file."
+msgstr ""
+
+#: web/translation_strings.py:235
+msgid "Removes the Shadow Copy to avoid recovery of the system"
+msgstr ""
+
+#: web/translation_strings.py:236
+msgid "Uses an extension used by Viruscoder"
+msgstr ""
+
+#: web/translation_strings.py:237
+msgid "Creates known Adzok RAT files"
+msgstr ""
+
+#: web/translation_strings.py:238
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Bandook files and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:239
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known BeastDoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:240
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Beebus mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:241
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Bifrose files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:242
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid ""
+"Creates known BlackHole/SchwarzeSonne files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:243
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known BlackIce files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:244
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Blackshades files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:245
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Bladabindi mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:246
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Bottilda files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:247
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known BozokRAT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:248
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Buzus files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:249
+msgid "Turla-APT-Campaign: ComRAT"
+msgstr ""
+
+#: web/translation_strings.py:250
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Cybergate files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:251
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known DarkCloud files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:252
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known DarkShell files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:253
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Delf Trojan, registry keys or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:254
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Dibik/Shark Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:255
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known EvilBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:256
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known FarFli files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:257
+msgid "Connects to Fexel Backdoor IP 103.17.117.90"
+msgstr ""
+
+#: web/translation_strings.py:258
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known FlyStudio files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:259
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Fynloski/DarkComet files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:260
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known GhostBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:261
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known HesperBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:262
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Hkit Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:263
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Hupigon files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:264
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known IcePoint RAT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:265
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Jewdo Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:266
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Jorik Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:267
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Karakum/SaharaBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:268
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Koutodoor Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:269
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Aspxor/Kuluoz mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:270
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Likseput RAT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:271
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Madness files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:272
+msgid "Contacts Botnet HTTP check-in"
+msgstr ""
+
+#: web/translation_strings.py:273
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Magania Backdoor mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:274
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known MinerBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:275
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known MyBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:276
+msgid "Connects to Naid Backdoor IP 219.90.117.132"
+msgstr ""
+
+#: web/translation_strings.py:277
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known NakBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:278
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known NetObserve Spyware files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:279
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Netshadow files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:280
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Netwire files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:281
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Nitol/ServStart files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:282
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known NJRat files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:283
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Pasta Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:284
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known PcClient mutex and/or file changes."
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:285
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known PlugX files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:286
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known PoeBot/Zorenium files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:287
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Poison Ivy files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:288
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Pincav/QakBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:289
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known RBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:290
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Renos Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:291
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known SadBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:292
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Senna Spy files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:293
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Shadowbot files, registy keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:294
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Siggen RAT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:295
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known SpyNet files, registry changes and/or mutexes."
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:296
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Spy Recorder files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:297
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Staser files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:298
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Swrort Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:299
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known TeamViewer mutexes and/or registry changes."
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:300
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known TravNet files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:301
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Tr0gbot (Bifrose) files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:302
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Turkojan RAT files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:303
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known URLSpy files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:304
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known URX Botnet files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:305
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known VertexNet files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:306
+msgid "Contacts C&C server HTTP check-in (VertexNet)"
+msgstr ""
+
+#: web/translation_strings.py:307
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known WakBot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:308
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known XtremeRAT files, registry keys or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:309
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Zegost files, registry changes and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:310
+msgid "Looks up the external IP address"
+msgstr ""
+
+#: web/translation_strings.py:311
+msgid "Collects information on the system (ipconfig, netstat, systeminfo)"
+msgstr ""
+
+#: web/translation_strings.py:312
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known BlackEnergy Rootkit mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:313
+msgid "Creates and runs a batch file to remove the original binary"
+msgstr ""
+
+#: web/translation_strings.py:314
+msgid "Connects to Russian file sharing service RGhost.net"
+msgstr "Conecta-se ao serviço russo de compartilhamento de arquivos RGhost.net"
+
+#: web/translation_strings.py:315
+msgid "Shuts down the system, generally used for bypassing sandboxing"
+msgstr ""
+
+#: web/translation_strings.py:316
+msgid "Connects to SIP Stun Server"
+msgstr ""
+
+#: web/translation_strings.py:317
+msgid "Connects to smtp.gmail.com, possibly for spamming or data exfiltration"
+msgstr ""
+
+#: web/translation_strings.py:318
+msgid "Connects to smtp.live.com, possibly for spamming or data exfiltration"
+msgstr ""
+
+#: web/translation_strings.py:319
+msgid "Connects to smtp.mail.ru, possibly for spamming or data exfiltration"
+msgstr ""
+
+#: web/translation_strings.py:320
+msgid ""
+"Connects to smtp.mail.yahoo.com, possibly for spamming or data exfiltration"
+msgstr ""
+
+#: web/translation_strings.py:321
+msgid "Installs WinPCAP"
+msgstr ""
+
+#: web/translation_strings.py:322
+msgid "Creates an autorun.inf file"
+msgstr ""
+
+#: web/translation_strings.py:323
+msgid "Stops Windows services"
+msgstr ""
+
+#: web/translation_strings.py:325
+msgid "Creates known TAPI mutex, possibly intended for Toll Fraud"
+msgstr ""
+
+#: web/translation_strings.py:326
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Bublik Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:327
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Ceatrg Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:328
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known CoinMiner Trojan mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:329
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Dapato Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:330
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Begseabug Trojan Downloader mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:331
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Upatre Trojan Downloader mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:332
+msgid "Emotet Trojan Indicators Found"
+msgstr ""
+
+#: web/translation_strings.py:333
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Jorik Trojan Files, Registry Keys and/or Mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:334
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Kilim Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:335
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Lethic Trojan Files, Registry Keys and/or Mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:336
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Lockscreen Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:337
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known MrBlack Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:338
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Obfus Trojan mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:339
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Pincav Trojan Files, Registry Keys and/or Mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:340
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Redosru Trojan Files, Registry Keys and/or Mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:341
+msgid "Rovnix Trojan"
+msgstr ""
+
+#: web/translation_strings.py:342
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Sysn Trojan Files, Registry Keys and/or Mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:343
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Tnega Trojan mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:344
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known VBInject Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:345
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known YoDDoS Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:346
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Andromeda files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:347
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Bagle/Skynet files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:348
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Banload Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:349
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known BTC/LTC Mining Botnet files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:350
+msgid "Contacts C&C server HTTP check-in (C24 Stealer)"
+msgstr ""
+
+#: web/translation_strings.py:351
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Crilock/Cryptolocker files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:352
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known ddos556 files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:353
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Decay files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:354
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known DoFoil files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:355
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Dyreza Banking Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:356
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Expiro files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:357
+msgid "Creates known FakeAV/FakeSysDef Mutexes"
+msgstr ""
+
+#: web/translation_strings.py:358
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known FakeAV/Urausy mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:359
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Gaelicum Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:360
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Infinity Bot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:361
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known IRC Brute files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:362
+msgid "Contacts C&C server HTTP check-in (ISRstealer)"
+msgstr ""
+
+#: web/translation_strings.py:363
+msgid "Contacts C&C server HTTP check-in (iStealer)"
+msgstr ""
+
+#: web/translation_strings.py:364
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Karagany files, registry keys and/or mutexes (Havex APT)"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:365
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Katusha Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:366
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known KillDisk Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:367
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Koobface files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:368
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Luder files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:369
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Napolar files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:370
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Nebuler Trojan files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:371
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Oldrea files, registry keys and/or mutexes (Havex APT)"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:372
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known PerfLogger files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:373
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Pidief files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:374
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Ponfoy files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:375
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Pykse Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:376
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Ragebot files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:377
+msgid "Ramnit malware indicators found"
+msgstr "Indicadores do malware Ramnit encontrados"
+
+#: web/translation_strings.py:378
+msgid "Contacts C&C server HTTP check-in (Sharp Stealer)"
+msgstr ""
+
+#: web/translation_strings.py:379
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Shiz files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:380
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Caphaw/Shylock files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:381
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known UFR Stealer files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:382
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Upatre files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:383
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Jeefo Virus mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:384
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Tufik Virus mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:385
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Virut files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:386
+msgid "Malfind detects one or more injected processes"
+msgstr ""
+
+#: web/translation_strings.py:387
+msgid ""
+"PEB modified to hide loaded modules. Dll very likely not loaded by "
+"LoadLibrary"
+msgstr ""
+
+#: web/translation_strings.py:389
+msgid ""
+"PEB modified to hide loaded modules. Not path name. Dll very likely not "
+"loaded by LoadLibrary"
+msgstr ""
+
+#: web/translation_strings.py:391
+msgid "Device driver without name"
+msgstr ""
+
+#: web/translation_strings.py:392
+msgid "Stopped Firewall service"
+msgstr ""
+
+#: web/translation_strings.py:393
+msgid "Stopped Security Center service"
+msgstr ""
+
+#: web/translation_strings.py:394
+msgid "Stopped Application Layer Gateway service"
+msgstr ""
+
+#: web/translation_strings.py:395
+msgid "Kernel module without a name"
+msgstr ""
+
+#: web/translation_strings.py:396
+msgid "One or more thread handles in other processes"
+msgstr ""
+
+#: web/translation_strings.py:397
+msgid "Uses Windows utilities for basic Windows functionality"
+msgstr ""
+
+#: web/translation_strings.py:398
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Allaple Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:399
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Fesber Worm mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:400
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known KolaBC Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:401
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Krepper P2P Worm mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:402
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Rimecud/Palevo Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:403
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Phorphiex files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:404
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Psyokym Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:405
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Puce P2P Worm mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:406
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Renocide Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:407
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Rungbu Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:408
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known Runouce Email Worm mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:409
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known WinSxsBot/Sfone Worm files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"
+
+#: web/translation_strings.py:410
+#, fuzzy
+#| msgid "Creates known Dexter registry keys and/or mutexes"
+msgid "Creates known X-Worm Backdoor files, registry keys and/or mutexes"
+msgstr "Cria chaves de registro e/ou mutexes conhecidos do Dexter"

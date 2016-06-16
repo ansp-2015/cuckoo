@@ -9,10 +9,10 @@
     <table class="table table-striped" style="table-layout: fixed;">
         <thead>
         <tr>
-            <th>Timestamp</th>
-            <th>Category</th>
-            <th>Target</th>
-            <th>Status</th>
+            <th>{% trans "Timestamp" %}</th>
+            <th>{% trans "Category" %}</th>
+            <th>{% trans "Target" %}</th>
+            <th>{% trans "Status" %}</th>
         </tr>
         </thead>
         <tbody>
@@ -22,10 +22,10 @@
                 {% if task.status == "reported" %}
                     {{task.completed_on}}
                 {% else %}
-                    <span class="muted">{{task.added_on}} (added on)</span>
+                    <span class="muted">{{task.added_on}} ({% trans "added on" %})</span>
                 {% endif %}
                 </td>
-                <td>{{task.category}}</td>
+                <td>{% trans task.category %}</td>
                 <td>{{task.target}}</td>
                 <td>
                     {% if task.status == "pending" %}
@@ -37,7 +37,7 @@
                     {% elif task.status == "reported" %}
                         <span class="text-success">{% trans "reported" %}</span>
                     {% else %}
-                        <span class="text-danger">{{task.status}}</span>
+                        <span class="text-danger">{% trans task.status %}</span>
                     {% endif %}
                 </td>
             </tr>

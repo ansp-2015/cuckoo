@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block content %}
+{% trans status as s_status %}
 <script type="text/JavaScript">setTimeout("location.reload(true);", 5000);</script>
 <div class="alert alert-info">
     <h4>{% trans "Hang on..." %}</h4>
     <p>
         {% blocktrans trimmed %}
-        The analysis is not completed yet, it's still <b>{{status}}</b>. This page will refresh every 5 seconds.
+        The analysis is not completed yet, it's still <b>{{ s_status }}</b>. This page will refresh every 5 seconds.
         {% endblocktrans %}
     </p>
     <div class="progress progress-striped active" style="margin-top: 10px;">

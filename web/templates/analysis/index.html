@@ -16,10 +16,10 @@
             <table class="table table-striped" style="table-layout: fixed;">
                 <thead>
                 <tr>
-                    <th>Timestamp</th>
-                    <th>Filename</th>
+                    <th>{% trans "Timestamp" %}</th>
+                    <th>{% trans "Filename" %}</th>
                     <th>MD5</th>
-                    <th>Status</th>
+                    <th>{% trans "Status" %}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -29,7 +29,7 @@
                         {% if analysis.status == "reported" %}
                             {{analysis.completed_on}}
                         {% else %}
-                            <span class="muted">{{analysis.added_on}} (added on)</span>
+                            <span class="muted">{{analysis.added_on}} ({% trans "added on" %})</span>
                         {% endif %}
                         </td>
                         <td>
@@ -58,7 +58,7 @@
 
                                 {% trans "reported" %}</span>
                             {% else %}
-                                <span class="text-danger">{{analysis.status}}</span>
+                                <span class="text-danger">{% trans analysis.status %}</span>
                             {% endif %}
                         </td>
                     </tr>

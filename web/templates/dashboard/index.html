@@ -36,7 +36,7 @@
         <tbody>
         {% for state, count in report.states_count.items %}
             <tr>
-                <td>{{state}}</td>
+                <td>{% trans state %}</td>
                 <td>{{count}}</td>
             </tr>
         {% endfor %}

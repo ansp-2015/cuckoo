@@ -72,8 +72,8 @@ def render_index(request, kwargs={}):
         machines.append((machine.label, label))
 
     # Prepend ALL/ANY options.
-    machines.insert(0, ("", "First available"))
-    machines.insert(1, ("all", "All"))
+    machines.insert(0, ("", _("First available")))
+    machines.insert(1, ("all", _("All")))
 
     values = {
         "packages": sorted(packages),

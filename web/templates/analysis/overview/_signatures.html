@@ -21,7 +21,7 @@
     {% for signature in analysis.signatures %}
         <a style="text-decoration: none;" href="#signature_{{signature.name}}" data-toggle="collapse">
         <div class="alert {% if signature.severity <= 1 %}alert-info{% elif signature.severity == 2 %}alert-warning{% else %}alert-danger{% endif %} signature">
-        {{signature.description}}
+        {% trans signature.description %}
         {% if signature.marks %}
             {% if signature.marks|length == 1 %}
             ({% trans "1 event" %})
